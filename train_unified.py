@@ -199,11 +199,22 @@ def main():
             'history': history
         }, os.path.join(exp_dir, 'checkpoint_last.pth'))
         
-    # Save History
+    # 4. Final Evaluation on Test Set
+    print("\n--- Final Evaluation on Test Set ---")
+    test_loader = DataLoader(test_set, batch_size=args.batch_size, shuffle=False, 
+                             num_workers=args.num_workers, pin_memory=True)
+    
+    test_loss, test_acc = validate(model, test_loader, criterion, device, args.epochs)
+    print(f"Test Loss: {test_loss:.4f} Test Acc: {test_acc:.4f}")
+    
+    history['test_loss'] = test_loss
+    history['test_acc'] = test_acc
+    
+    # Save Final Results
     with open(os.path.join(exp_dir, 'history.json'), 'w') as f:
         json.dump(history, f, indent=4)
         
-    print("Training Complete.")
+    print("Training and Evaluation Complete.")
 
 if __name__ == '__main__':
     main()
