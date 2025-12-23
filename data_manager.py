@@ -165,39 +165,43 @@ def get_transforms(intensity='none', input_size=224):
     multipliers = {'low': 0.5, 'medium': 1.0, 'high': 1.5}
     m = multipliers.get(intensity, 1.0)
     
-    deg = base_deg * m
-    trans = base_trans * m
-    scale_pct = base_scale * m
-    shear_deg = 10 * m # Assume 0.1 ~ 10 degrees base
+    # Keras semantics from DeiT file
+    deg = 10 * m
+    tx = 0.1 * m
+    ty = 0.1 * m
+    zm = 0.1 * m
+    shr = 0.1 * m # Radians
+    sh_deg = np.degrees(shr) if shr > 0 else 0.0
     
-    # "applied with independent probabilities per image"
-    # To implement "independent probabilities", we can compose RandomOrder or just Sequence of RandomApply.
-    # Standard torchvision RandomAffine combines these. 
-    # If we want truly independent prob for EACH op (rotate, shift, etc), we'd need separate RandomAffines? 
-    # Usually "Geometric augmentation ... composed of [list]" implies one Affine transform with these ranges.
-    # But "applied with independent probabilities" strongly suggests:
-    # Maybe Rotate(p=?), Flip(p=?), Shear(p=?)?
-    # Keras ImageDataGenerator applies them all together if ranges are set.
-    # The prompt might mean "applied with probabilities" -> RandomApply wrapping each?
-    # Or just "The augmentation pipeline consists of ... applied randomly".
-    # I will construct a robust pipeline using `RandomAffine` for geometric combining (cleaner, less interpolation artifacts) 
-    # but since "independent probabilities" is specific, maybe they want:
-    # RandomRotation(p=P), RandomShift(p=P)...
-    # But doing Shift then Rotate then Shear = 3 interpolations = blurry images.
-    # Best practice: ONE RandomAffine with all ranges. 
-    # "Independent probabilities" might just refer to the fact that for any given image, the specific parameters are sampled.
-    # I will use one RandomAffine for quality, but enable Flip separately.
+    # Validation/Test is always just Resize + Norm
+    val_transforms = transforms.Compose([
+        transforms.Resize((input_size, input_size), interpolation=InterpolationMode.BILINEAR),
+        transforms.ToTensor(),
+        transforms.Normalize(mean=DEFAULT_MEAN, std=DEFAULT_STD)
+    ])
+    
+    if intensity == 'none':
+        return val_transforms, val_transforms
+
+    # Train transforms with exact Keras emulation
+    translate = (max(0.0, min(tx, 0.499)), max(0.0, min(ty, 0.499)))
+    scale = (max(0.0, 1.0 - zm), 1.0 + zm)
+    
+    # Emulate nearest fill mode: edge-pad -> affine -> crop
+    pad_px = int(round(0.12 * input_size))
     
     train_ops = [
-        transforms.Resize((input_size, input_size), interpolation=InterpolationMode.BICUBIC),
+        transforms.Resize((input_size, input_size), interpolation=InterpolationMode.BILINEAR),
         transforms.RandomHorizontalFlip(p=0.5),
+        transforms.Pad(pad_px, padding_mode="edge"),
         transforms.RandomAffine(
-            degrees=deg,
-            translate=(trans, trans),
-            scale=(1.0 - scale_pct, 1.0 + scale_pct),
-            shear=shear_deg,
-            interpolation=InterpolationMode.BILINEAR 
+            degrees=(-deg, deg),
+            translate=translate,
+            scale=scale,
+            shear=(-sh_deg, sh_deg),
+            interpolation=InterpolationMode.BILINEAR
         ),
+        transforms.CenterCrop((input_size, input_size)),
         transforms.ToTensor(),
         transforms.Normalize(mean=DEFAULT_MEAN, std=DEFAULT_STD)
     ]

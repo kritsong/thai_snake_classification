@@ -1,62 +1,92 @@
-# Thai Snake Classification
+# Thai Snake Classification: A Unified Benchmarking Pipeline
 
-This repository contains the code for training snake species classification models using PyTorch, supporting both CNNs (MobileNetV3, EfficientNet, ResNet) and Vision Transformers (ViT, Swin).
+This repository provides a unified PyTorch-based pipeline for classifying Thai snake species. It supports a variety of modern architectures, including Convolutional Neural Networks (CNNs) and Vision Transformers (ViTs), with a standardized experimental protocol designed for academic reproducibility.
 
-## Setup
+## Features
 
-1. Install dependencies:
+- **Unified Training Loop**: Standardized training script (`train_unified.py`) for both CNN and Transformer families.
+- **Modern Architectures**:
+  - **CNNs**: MobileNetV3-Small, EfficientNet-B0, ResNet-50.
+  - **Transformers**: ViT-Base/16, Swin-Base, DeiT-Base (distilled).
+- **Reproducible Methodology**: Fixed seeds, standardized data splits, and precise augmentation profiles.
+- **Hardware Optimized**: Integrated support for Automatic Mixed Precision (AMP) and optimized data loading for NVIDIA GPUs (e.g., RTX 4090).
 
-   ```bash
-   pip install -r requirements.txt
-   ```
+---
 
-2. Dataset Structure:
+## Experimental Protocol
 
-   ```
-   dataset_root/
-       Species_A/
-           img1.jpg
-           ...
-       Species_B/
-           ...
-   ```
+### 1. Data Management
 
-## Usage
+The pipeline implements a rigorous data selection and splitting strategy:
 
-The `train_unified.py` script handles the entire pipeline: loading data, filtering by threshold, augmenting, and training.
+- **Species Filtering**: Only species with at least $T$ images are retained. Supported thresholds $T \in \{100, 200, 300, 400, 500\}$.
+- **Splitting Strategy**:
+  - Initial **80:20** split into **Train+Val** and **Test** sets.
+  - Secondary **80:20** split of the **Train+Val** portion into **Training** and **Validation** sets.
+- **Preprocessing**: All images are resized to $224 \times 224$ pixels and normalized using standard ImageNet mean and variance.
 
-### Example Commands
+### 2. Augmentation Strategy
 
-**Train MobileNetV3-Small (CNN) with Threshold 100:**
+On-the-fly geometric augmentations follow four intensity profiles (**none**, **low**, **medium**, **high**), composed of:
+
+- Rotation, Horizontal Flip, Shear, Width/Height Shifts, and Zoom.
+- Precise Keras-style emulation using a Pad-Affine-Crop sequence.
+
+### 3. Optimization
+
+A unified optimization protocol is applied to all models:
+
+- **Optimizer**: AdamW with a weight decay of 0.05.
+- **Schedule**: Cosine learning-rate schedule over 50 epochs.
+- **Gradient Clipping**: Global-norm clipping at 1.0.
+- **Warm-up**: 10-epoch freeze-unfreeze schedule. The backbone remains frozen for the first 10 epochs, with only the classification head updated.
+- **Two-Group Learning Rates**:
+  - **CNNs**: Backbone ($1 \times 10^{-4}$), Head ($1 \times 10^{-3}$).
+  - **Transformers**: Backbone ($2 \times 10^{-5}$), Head ($2 \times 10^{-4}$).
+
+---
+
+## Getting Started
+
+### Installation
 
 ```bash
-python train_unified.py --model MobileNetV3-Small --threshold 100 --aug_intensity medium --data_dir /path/to/dataset
+conda activate your_env
+pip install -r requirements.txt
 ```
 
-**Train ViT-Base (Transformer) with Threshold 500:**
+### Usage
+
+Use `train_unified.py` to launch experiments:
 
 ```bash
-python train_unified.py --model ViT-Base/16 --threshold 500 --aug_intensity high --data_dir /path/to/dataset
+python train_unified.py \
+    --model MobileNetV3-Small \
+    --threshold 100 \
+    --aug_intensity medium \
+    --data_dir /path/to/dataset
 ```
 
-### Arguments
+#### Arguments
 
-- `--model`: Model architecture. Choices: `MobileNetV3-Small`, `EfficientNet-B0`, `ResNet-50`, `ViT-Base/16`, `Swin-Base`.
-- `--threshold`: Minimum number of images per species to include class (100, 200, 300, 400, 500).
-- `--aug_intensity`: Augmentation intensity (`none`, `low`, `medium`, `high`).
-- `--data_dir`: Path to dataset root.
-- `--output_dir`: Directory for outputs (checkpoints, logs).
-- `--epochs`: Number of epochs (default: 50).
-- `--batch_size`: Batch size (default: 16).
+- `--model`: Architecture selection (`MobileNetV3-Small`, `EfficientNet-B0`, `ResNet-50`, `ViT-Base/16`, `Swin-Base`, `DeiT-Base`).
+- `--threshold`: Minimum image count per species (`100`, `200`, `300`, `400`, `500`).
+- `--aug_intensity`: Augmentation level (`none`, `low`, `medium`, `high`).
+- `--data_dir`: Root directory of the dataset.
 
-## Experimental Setup Details
+---
 
-- **Hardware**: optimized for RTX 4090 (AMP enabled).
-- **Preprocessing**: Resize to 224x224, Normalized (ImageNet stats).
-- **Splits**:
-    1. Filter classes < Threshold.
-    2. Split 80/20 (Train+Val / Test).
-    3. Split Train+Val 80/20 (Train / Val).
-- **Optimizer**: AdamW (wd=0.05).
-- **Scheduler**: Cosine Annealing (50 epochs).
-- **Freezing**: Backbone frozen for first 10 epochs.
+## Repository Structure
+
+- `train_unified.py`: Main entry point for training and evaluation.
+- `data_manager.py`: Dataset loading, filtering, splitting, and augmentation logic.
+- `models.py`: Unified model factory and LR configuration.
+- `requirements.txt`: Environment dependencies.
+
+---
+
+## Citation
+
+If you use this codebase in your research, please cite the original project.
+
+```

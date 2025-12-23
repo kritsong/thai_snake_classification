@@ -25,7 +25,8 @@ def get_model(model_name, num_classes, pretrained=True):
         'EfficientNet-B0': 'efficientnet_b0',
         'ResNet-50': 'resnet50',
         'ViT-Base/16': 'vit_base_patch16_224',
-        'Swin-Base': 'swin_base_patch4_window7_224'
+        'Swin-Base': 'swin_base_patch4_window7_224',
+        'DeiT-Base': 'deit_base_distilled_patch16_224'
     }
     
     timm_name = name_map.get(model_name, model_name)
@@ -81,7 +82,7 @@ def get_lr_config(model_name):
     Transformers: Backbone 2e-5, Head 2e-4
     CNNs: Backbone 1e-4, Head 1e-3
     """
-    transformers = ['ViT-Base/16', 'Swin-Base']
+    transformers = ['ViT-Base/16', 'Swin-Base', 'DeiT-Base']
     
     if model_name in transformers:
         return 2e-5, 2e-4

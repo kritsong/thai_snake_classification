@@ -76,7 +76,7 @@ def main():
     parser.add_argument('--data_dir', type=str, default="C:\\Users\\ADMIN\\Downloads\\snake_datasetNew", help='Path to dataset')
     parser.add_argument('--output_dir', type=str, default="experiments", help='Dir to save results')
     parser.add_argument('--threshold', type=int, default=100, choices=[100, 200, 300, 400, 500])
-    parser.add_argument('--model', type=str, required=True, choices=['MobileNetV3-Small', 'EfficientNet-B0', 'ResNet-50', 'ViT-Base/16', 'Swin-Base'])
+    parser.add_argument('--model', type=str, required=True, choices=['MobileNetV3-Small', 'EfficientNet-B0', 'ResNet-50', 'ViT-Base/16', 'Swin-Base', 'DeiT-Base'])
     parser.add_argument('--aug_intensity', type=str, default='medium', choices=['none', 'low', 'medium', 'high'])
     parser.add_argument('--epochs', type=int, default=50)
     parser.add_argument('--batch_size', type=int, default=16)
@@ -91,7 +91,8 @@ def main():
     print(f"Using device: {device}")
     
     os.makedirs(args.output_dir, exist_ok=True)
-    exp_name = f"{args.model}_{args.aug_intensity}_T{args.threshold}"
+    safe_model_name = args.model.replace('/', '_').replace('\\', '_')
+    exp_name = f"{safe_model_name}_{args.aug_intensity}_T{args.threshold}"
     exp_dir = os.path.join(args.output_dir, exp_name)
     os.makedirs(exp_dir, exist_ok=True)
     
