@@ -11,8 +11,12 @@ from tqdm import tqdm
 import numpy as np
 
 # Local imports
-from data_manager import filter_and_split_data, SnakeDataset, get_transforms, set_seed
-from models import get_model, get_lr_config
+# Add parent directory to path to allow importing 'common'
+import sys
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
+from common.data_manager import filter_and_split_data, SnakeDataset, get_transforms, set_seed
+from common.models import get_model, get_lr_config
 
 def train_one_epoch(model, loader, optimizer, criterion, device, scaler, epoch):
     model.train()

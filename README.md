@@ -76,12 +76,70 @@ python train_unified.py \
 
 ---
 
+## Inference
+
+### Local Inference
+
+The `inference_local.py` script supports both standard PyTorch checkpoints (`.pth`) and Hugging Face Transformers model folders.
+
+**Using a standard checkpoint:**
+
+```bash
+python inference_local.py \
+    --image /path/to/test_image.jpg \
+    --model_path experiments/EfficientNet-B0_medium_T100/checkpoint_last.pth \
+    --class_indices experiments/EfficientNet-B0_medium_T100/class_indices.json \
+    --model_name EfficientNet-B0
+```
+
+**Using a Transformers model (e.g., Swin):**
+
+```bash
+python inference_local.py \
+    --image /path/to/test_image.jpg \
+    --model_path transformer_experiment_results_swin_exact/Swin-Base_augnone_fineT_thres500
+```
+
+*(Note: For Transformers models, class mapping and architecture are inferred from `config.json` inside the directory).*
+
+### Model Upload to Hugging Face Hub
+
+Use `huggingface_upload.py` to upload your experiment results to the Hugging Face Hub:
+
+```bash
+python huggingface_upload.py \
+    --folder experiments/EfficientNet-B0_medium_T100 \
+    --repo_id kritaphatson/thai_snake_image_classifier \
+    --token YOUR_HF_TOKEN
+```
+
+### Hugging Face hosting
+
+To host the model on Hugging Face Spaces:
+
+1. Create a new Space with the **Gradio** SDK.
+2. Upload `app.py`, `models.py`, `data_manager.py`, and `requirements.txt`.
+3. Upload your trained model checkpoint (e.g., `checkpoint_last.pth`) and `class_indices.json`.
+4. Update the paths in `app.py` to point to your uploaded files.
+5. The Space will automatically build and launch the Gradio interface.
+
+For local web UI testing:
+
+```bash
+python app.py
+```
+
+---
+
 ## Repository Structure
 
 - `train_unified.py`: Main entry point for training and evaluation.
 - `data_manager.py`: Dataset loading, filtering, splitting, and augmentation logic.
 - `models.py`: Unified model factory and LR configuration.
 - `requirements.txt`: Environment dependencies.
+- `inference_local.py`: Command-line interface for local testing.
+- `huggingface_upload.py`: Script to upload models to Hugging Face Hub.
+- `app.py`: Gradio web interface for Hugging Face Spaces.
 
 ---
 
@@ -89,4 +147,13 @@ python train_unified.py \
 
 If you use this codebase in your research, please cite the original project.
 
+```bibtex
+@misc{thai_snake_classification_2025,
+  author = {Snake Research Team},
+  title = {Thai Snake Classification: A Unified Benchmarking Pipeline},
+  year = {2025},
+  publisher = {GitHub},
+  journal = {GitHub repository},
+  howpublished = {\url{https://github.com/user/thai_snake_classification}}
+}
 ```

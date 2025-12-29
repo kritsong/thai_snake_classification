@@ -6,3 +6,6 @@ pandas
 scikit-learn
 Pillow
 tqdm
+gradio
+transformers
+safetensors
