@@ -2,6 +2,10 @@
 
 This repository provides a unified PyTorch-based pipeline for classifying Thai snake species. It supports a variety of modern architectures, including Convolutional Neural Networks (CNNs) and Vision Transformers (ViTs), with a standardized experimental protocol designed for academic reproducibility.
 
+## Interactive Demo
+
+Explore the model and visualize predictions with Grad-CAM on our [Hugging Face Space](https://huggingface.co/spaces/kritaphatson/thai-snake-image-classifier-app).
+
 ## Features
 
 - **Unified Training Loop**: Standardized training script (`train_unified.py`) for both CNN and Transformer families.
@@ -142,18 +146,3 @@ python app.py
 - `app.py`: Gradio web interface for Hugging Face Spaces.
 
 ---
-
-## Citation
-
-If you use this codebase in your research, please cite the original project.
-
-```bibtex
-@misc{thai_snake_classification_2025,
-  author = {Snake Research Team},
-  title = {Thai Snake Classification: A Unified Benchmarking Pipeline},
-  year = {2025},
-  publisher = {GitHub},
-  journal = {GitHub repository},
-  howpublished = {\url{https://github.com/user/thai_snake_classification}}
-}
-```
