@@ -1,0 +1,11 @@
+{
+  "source_still_files": 22197,
+  "orientation_counts": {
+    "1": 22197
+  },
+  "distinct_benchmark_still_files_found": 20571,
+  "distinct_benchmark_still_files_expected": 20571,
+  "benchmark_orientation_counts": {
+    "1": 20571
+  }
+}

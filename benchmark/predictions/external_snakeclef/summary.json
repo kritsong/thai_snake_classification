@@ -1,0 +1,292 @@
+{
+  "manifest_sha256": "542e09c4bd9eec06dd8fed38e114b2c13c9b50d6da7662bd279e9d4a114c764b",
+  "scope": {
+    "source_manifest_sha256": "3ce84aabcec5cb5d7476963e8aa85c9bbcdcb9eff961027bccc2f486ed25e2c7",
+    "scope_sha256": "0fb5f4bf78c1c76df4d59ea7efa83b8a132c3e2b9571bc8c23979c7e74d5e27b",
+    "images": 368,
+    "observations": 201,
+    "species": 82,
+    "matched_by_approved_mapping": [
+      "Bungarus multicinctus -> Bungarus wanghaotingi",
+      "Fowlea flavipunctata -> Fowlea flavipunctatus"
+    ],
+    "unmatched_snakeclef_names": [
+      "Ahaetulla fusca",
+      "Ahaetulla mycterizans",
+      "Bungarus candidus",
+      "Cerberus rynchops",
+      "Dendrelaphis ngansonensis",
+      "Gonyosoma coeruleum",
+      "Lycodon albofuscus",
+      "Lycodon butleri",
+      "Oligodon pseudotaeniatus",
+      "Pareas geminatus",
+      "Ptyas multicincta",
+      "Rhabdophis flaviceps",
+      "Rhabdophis helleri",
+      "Rhabdophis siamensis",
+      "Trimeresurus kuiburi",
+      "Trimeresurus sumatranus"
+    ],
+    "excluded_observations": [
+      "96180737"
+    ],
+    "rule": "SnakeCLEF name equals a model class after the approved local name mapping; no other equivalence; observation-level probability averaging at evaluation"
+  },
+  "systems": [
+    {
+      "system": "DINOv2 probe (frozen)",
+      "identity": "refit verified against saved test predictions",
+      "observations": 201,
+      "images": 368,
+      "species": 82,
+      "accuracy": 0.4626865671641791,
+      "accuracy_ci_low": 0.39303482587064675,
+      "accuracy_ci_high": 0.5323383084577115,
+      "top3_accuracy": 0.6567164179104478,
+      "macro_f1_external_species": 0.3356101805270603,
+      "balanced_accuracy_external_species": 0.38268486256291134
+    },
+    {
+      "system": "BioCLIP 2 probe (frozen)",
+      "identity": "refit verified against saved test predictions; possible training overlap: BioCLIP 2 training data (TreeOfLife-200M) includes GBIF/iNaturalist images",
+      "observations": 201,
+      "images": 368,
+      "species": 82,
+      "accuracy": 0.6467661691542289,
+      "accuracy_ci_low": 0.582089552238806,
+      "accuracy_ci_high": 0.7114427860696517,
+      "top3_accuracy": 0.8059701492537313,
+      "macro_f1_external_species": 0.5302828884305891,
+      "balanced_accuracy_external_species": 0.5620305845915602
+    },
+    {
+      "system": "BioCLIP 2 zero-shot",
+      "identity": "possible training overlap: BioCLIP 2 training data (TreeOfLife-200M) includes GBIF/iNaturalist images",
+      "observations": 201,
+      "images": 368,
+      "species": 82,
+      "accuracy": 0.7014925373134329,
+      "accuracy_ci_low": 0.6368159203980099,
+      "accuracy_ci_high": 0.7613184079601983,
+      "top3_accuracy": 0.8955223880597015,
+      "macro_f1_external_species": 0.6512606077168487,
+      "balanced_accuracy_external_species": 0.6769260549748355
+    },
+    {
+      "system": "ConvNeXt-V2-B 384, seesaw",
+      "identity": "c263f9701b2f16440559b7fe72b29461ae0049fa9c469bf9ec38a50586721843",
+      "observations": 201,
+      "images": 368,
+      "species": 82,
+      "accuracy": 0.5970149253731343,
+      "accuracy_ci_low": 0.5323383084577115,
+      "accuracy_ci_high": 0.6616915422885572,
+      "top3_accuracy": 0.7263681592039801,
+      "macro_f1_external_species": 0.47411587129173777,
+      "balanced_accuracy_external_species": 0.5021680216802168
+    },
+    {
+      "system": "ConvNeXt-V2-B 384, cross-entropy",
+      "identity": "fe32d1b8fa8c18614a259eedc4821a242f8de6c88a2f4c6f0f05898c56cfe4dc",
+      "observations": 201,
+      "images": 368,
+      "species": 82,
+      "accuracy": 0.5771144278606966,
+      "accuracy_ci_low": 0.5074626865671642,
+      "accuracy_ci_high": 0.6419154228855715,
+      "top3_accuracy": 0.7014925373134329,
+      "macro_f1_external_species": 0.43902413376097577,
+      "balanced_accuracy_external_species": 0.47859078590785903
+    },
+    {
+      "system": "ConvNeXt-V2-B 224, cross-entropy",
+      "identity": "48b2ab65b897815acc824847dd14104646b6a8bac69e90e4ed5796704042d3ba",
+      "observations": 201,
+      "images": 368,
+      "species": 82,
+      "accuracy": 0.5522388059701493,
+      "accuracy_ci_low": 0.48756218905472637,
+      "accuracy_ci_high": 0.6218905472636815,
+      "top3_accuracy": 0.7164179104477612,
+      "macro_f1_external_species": 0.39277910142173134,
+      "balanced_accuracy_external_species": 0.4358594657375145
+    },
+    {
+      "system": "MobileNetV3-Small (strong)",
+      "identity": "e486798fbfc9afaf9bcfc9804fb9f8ca5b083b13b96aa0ba9a684ef18e037ec3",
+      "observations": 201,
+      "images": 368,
+      "species": 82,
+      "accuracy": 0.1890547263681592,
+      "accuracy_ci_low": 0.13930348258706468,
+      "accuracy_ci_high": 0.24875621890547264,
+      "top3_accuracy": 0.3283582089552239,
+      "macro_f1_external_species": 0.10745507879654222,
+      "balanced_accuracy_external_species": 0.15110336817653888
+    },
+    {
+      "system": "EfficientNet-B0 (strong)",
+      "identity": "c067dd2ebeb9c1a51c09843d52d2c91b62182c78e18a2f143da0ccb7bbb11a84",
+      "observations": 201,
+      "images": 368,
+      "species": 82,
+      "accuracy": 0.2537313432835821,
+      "accuracy_ci_low": 0.19900497512437812,
+      "accuracy_ci_high": 0.31840796019900497,
+      "top3_accuracy": 0.3582089552238806,
+      "macro_f1_external_species": 0.15578310675616472,
+      "balanced_accuracy_external_species": 0.21336624080526517
+    },
+    {
+      "system": "ResNet-50 (strong)",
+      "identity": "1fc10cb5c62f240640e4e30ca7485bbc79b2a5ff4072140c401b6c2f7f3d9cb6",
+      "observations": 201,
+      "images": 368,
+      "species": 82,
+      "accuracy": 0.1791044776119403,
+      "accuracy_ci_low": 0.12935323383084577,
+      "accuracy_ci_high": 0.23383084577114427,
+      "top3_accuracy": 0.31343283582089554,
+      "macro_f1_external_species": 0.10054929726737474,
+      "balanced_accuracy_external_species": 0.13919860627177702
+    },
+    {
+      "system": "ViT-Base/16 (strong)",
+      "identity": "ea5ff6238becedcc448e3d154d2f1cadb63c722dc27d8f9b0e9a7c0607edbacc",
+      "observations": 201,
+      "images": 368,
+      "species": 82,
+      "accuracy": 0.4626865671641791,
+      "accuracy_ci_low": 0.39303482587064675,
+      "accuracy_ci_high": 0.5323383084577115,
+      "top3_accuracy": 0.6318407960199005,
+      "macro_f1_external_species": 0.34590607463634726,
+      "balanced_accuracy_external_species": 0.3753871467286101
+    },
+    {
+      "system": "DeiT-Base/16 (strong)",
+      "identity": "0ab2d688adf4451f059199251adcf0ed763af2429874914fdd7b5926dc824d82",
+      "observations": 201,
+      "images": 368,
+      "species": 82,
+      "accuracy": 0.3681592039800995,
+      "accuracy_ci_low": 0.3034825870646766,
+      "accuracy_ci_high": 0.43283582089552236,
+      "top3_accuracy": 0.6069651741293532,
+      "macro_f1_external_species": 0.27752085313060926,
+      "balanced_accuracy_external_species": 0.3059427022841657
+    },
+    {
+      "system": "Swin-Base (strong)",
+      "identity": "82a1b2fd86b0d13194fc8502cf69462c4118342e8904973a01fb157d4d6c7b3b",
+      "observations": 201,
+      "images": 368,
+      "species": 82,
+      "accuracy": 0.46766169154228854,
+      "accuracy_ci_low": 0.40298507462686567,
+      "accuracy_ci_high": 0.5373134328358209,
+      "top3_accuracy": 0.6517412935323383,
+      "macro_f1_external_species": 0.33009053954175904,
+      "balanced_accuracy_external_species": 0.37568718544328294
+    },
+    {
+      "system": "DINOv2-Base/14 (strong)",
+      "identity": "f436c1315595ced161502c2cdf66edc5aba329352569ebe31fb55115c09b16d4",
+      "observations": 201,
+      "images": 368,
+      "species": 82,
+      "accuracy": 0.5422885572139303,
+      "accuracy_ci_low": 0.472636815920398,
+      "accuracy_ci_high": 0.6119402985074627,
+      "top3_accuracy": 0.7114427860696517,
+      "macro_f1_external_species": 0.39627005785542374,
+      "balanced_accuracy_external_species": 0.43826945412311263
+    },
+    {
+      "system": "BioCLIP-2 (strong)",
+      "identity": "1707ba4eb6491a0b5846fd6be6bfc66f44c25cd859375226d1a05de41b7a05a0; possible training overlap: BioCLIP 2 training data (TreeOfLife-200M) includes GBIF/iNaturalist images",
+      "observations": 201,
+      "images": 368,
+      "species": 82,
+      "accuracy": 0.572139303482587,
+      "accuracy_ci_low": 0.5074626865671642,
+      "accuracy_ci_high": 0.6417910447761194,
+      "top3_accuracy": 0.746268656716418,
+      "macro_f1_external_species": 0.431140268945147,
+      "balanced_accuracy_external_species": 0.4696864111498258
+    }
+  ],
+  "paired_vs_best": [
+    {
+      "system_a": "ConvNeXt-V2-B 384, seesaw",
+      "system_b": "DINOv2 probe (frozen)",
+      "diff_accuracy": 0.13432835820895517,
+      "ci_low": 0.06965174129353235,
+      "ci_high": 0.20398009950248752
+    },
+    {
+      "system_a": "ConvNeXt-V2-B 384, seesaw",
+      "system_b": "ConvNeXt-V2-B 384, cross-entropy",
+      "diff_accuracy": 0.01990049751243772,
+      "ci_low": -0.00995024875621886,
+      "ci_high": 0.04975124378109452
+    },
+    {
+      "system_a": "ConvNeXt-V2-B 384, seesaw",
+      "system_b": "ConvNeXt-V2-B 224, cross-entropy",
+      "diff_accuracy": 0.04477611940298498,
+      "ci_low": -0.00497512437810943,
+      "ci_high": 0.09452736318407962
+    },
+    {
+      "system_a": "ConvNeXt-V2-B 384, seesaw",
+      "system_b": "MobileNetV3-Small (strong)",
+      "diff_accuracy": 0.40796019900497504,
+      "ci_low": 0.3383084577114428,
+      "ci_high": 0.4825870646766169
+    },
+    {
+      "system_a": "ConvNeXt-V2-B 384, seesaw",
+      "system_b": "EfficientNet-B0 (strong)",
+      "diff_accuracy": 0.3432835820895522,
+      "ci_low": 0.2686567164179105,
+      "ci_high": 0.40796019900497515
+    },
+    {
+      "system_a": "ConvNeXt-V2-B 384, seesaw",
+      "system_b": "ResNet-50 (strong)",
+      "diff_accuracy": 0.417910447761194,
+      "ci_low": 0.34328358208955223,
+      "ci_high": 0.48756218905472637
+    },
+    {
+      "system_a": "ConvNeXt-V2-B 384, seesaw",
+      "system_b": "ViT-Base/16 (strong)",
+      "diff_accuracy": 0.13432835820895517,
+      "ci_low": 0.07462686567164178,
+      "ci_high": 0.19402985074626872
+    },
+    {
+      "system_a": "ConvNeXt-V2-B 384, seesaw",
+      "system_b": "DeiT-Base/16 (strong)",
+      "diff_accuracy": 0.22885572139303478,
+      "ci_low": 0.16417910447761191,
+      "ci_high": 0.29850746268656714
+    },
+    {
+      "system_a": "ConvNeXt-V2-B 384, seesaw",
+      "system_b": "Swin-Base (strong)",
+      "diff_accuracy": 0.12935323383084574,
+      "ci_low": 0.06965174129353235,
+      "ci_high": 0.1940298507462686
+    },
+    {
+      "system_a": "ConvNeXt-V2-B 384, seesaw",
+      "system_b": "DINOv2-Base/14 (strong)",
+      "diff_accuracy": 0.05472636815920395,
+      "ci_low": -0.0001243781094527287,
+      "ci_high": 0.10957711442786007
+    }
+  ]
+}

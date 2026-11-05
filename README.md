@@ -2,6 +2,16 @@
 
 This repository provides a unified PyTorch-based pipeline for classifying Thai snake species. It supports a variety of modern architectures, including Convolutional Neural Networks (CNNs) and Vision Transformers (ViTs), with a standardized experimental protocol designed for academic reproducibility.
 
+## Benchmark release (2026)
+
+The [`benchmark/`](benchmark/README.md) folder holds the records, predictions and code of the regional
+benchmark: 26,368 images of 139 Thai snake species with a report-, post- and duplicate-grouped
+development/test split and grouped cross-validation, nine architectures trained with the SnakeCLEF-style
+protocol, ConvNeXt-V2 at 384 px with cross-entropy and Seesaw loss, BioCLIP 2 zero-shot, and external
+SnakeCLEF Thailand validation. Trained checkpoints are on
+[Hugging Face](https://huggingface.co/kritaphatson/thai_snake_image_classifier) (`benchmark_v4/`).
+The pipeline described in the sections below is the earlier threshold-based setup, kept for reference.
+
 ## Interactive Demo
 
 Explore the model and visualize predictions with Grad-CAM on our [Hugging Face Space](https://huggingface.co/spaces/kritaphatson/thai-snake-image-classifier-app).

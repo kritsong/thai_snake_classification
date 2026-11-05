@@ -1,0 +1,21 @@
+system_a,system_b,metric,min_difference,max_difference,same_sign_all_9
+"ConvNeXt-V2-B 224, cross-entropy",DINOv2-Base/14 (strong),accuracy,-0.0320865767989367,-0.0239225365483197,True
+"ConvNeXt-V2-B 224, cross-entropy",DINOv2-Base/14 (strong),balanced_accuracy,-0.0330946306335325,-0.0133143532658412,True
+"ConvNeXt-V2-B 224, cross-entropy",BioCLIP-2 (strong),accuracy,-0.0465160432883995,-0.0330358838048224,True
+"ConvNeXt-V2-B 224, cross-entropy",BioCLIP-2 (strong),balanced_accuracy,-0.0615410702203663,-0.0415561689398426,True
+"ConvNeXt-V2-B 224, cross-entropy","ConvNeXt-V2-B 384, seesaw",accuracy,-0.0875261059426618,-0.0791722042908676,True
+"ConvNeXt-V2-B 224, cross-entropy","ConvNeXt-V2-B 384, seesaw",balanced_accuracy,-0.1842442757057574,-0.1395668657322827,True
+"ConvNeXt-V2-B 224, cross-entropy","ConvNeXt-V2-B 384, cross-entropy",accuracy,-0.0975887602050503,-0.0924625023732674,True
+"ConvNeXt-V2-B 224, cross-entropy","ConvNeXt-V2-B 384, cross-entropy",balanced_accuracy,-0.1150505927566202,-0.0920361359069605,True
+DINOv2-Base/14 (strong),BioCLIP-2 (strong),accuracy,-0.0191760015188912,-0.0043668122270742,True
+DINOv2-Base/14 (strong),BioCLIP-2 (strong),balanced_accuracy,-0.0385597737855059,-0.0181284814753291,True
+DINOv2-Base/14 (strong),"ConvNeXt-V2-B 384, seesaw",accuracy,-0.0601860641731535,-0.0505031327131194,True
+DINOv2-Base/14 (strong),"ConvNeXt-V2-B 384, seesaw",balanced_accuracy,-0.161262979270897,-0.1161391782677693,True
+DINOv2-Base/14 (strong),"ConvNeXt-V2-B 384, cross-entropy",accuracy,-0.070248718435542,-0.0637934307955192,True
+DINOv2-Base/14 (strong),"ConvNeXt-V2-B 384, cross-entropy",balanced_accuracy,-0.0920692963217598,-0.0686084484424471,True
+BioCLIP-2 (strong),"ConvNeXt-V2-B 384, seesaw",accuracy,-0.0510727169166508,-0.0360736662236567,True
+BioCLIP-2 (strong),"ConvNeXt-V2-B 384, seesaw",balanced_accuracy,-0.1330211635968957,-0.0876927386809355,True
+BioCLIP-2 (strong),"ConvNeXt-V2-B 384, cross-entropy",accuracy,-0.0611353711790393,-0.0493639643060564,True
+BioCLIP-2 (strong),"ConvNeXt-V2-B 384, cross-entropy",balanced_accuracy,-0.0638274806477585,-0.0401620088556133,True
+"ConvNeXt-V2-B 384, seesaw","ConvNeXt-V2-B 384, cross-entropy",accuracy,-0.0149990506929941,-0.0083539016517941,True
+"ConvNeXt-V2-B 384, seesaw","ConvNeXt-V2-B 384, cross-entropy",balanced_accuracy,0.0341832161446816,0.0825411966297778,True

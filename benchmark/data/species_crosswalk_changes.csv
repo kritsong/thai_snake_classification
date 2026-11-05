@@ -1,0 +1,53 @@
+source_label,class,action,reason,revision_20261020,final_class
+Ahaeltulla prasina,Ahaetulla prasina,Fix spelling (merge),Misspelled genus,,Ahaetulla prasina
+Ahealtulla prasina,Ahaetulla prasina,Fix spelling (merge),Misspelled genus,,Ahaetulla prasina
+Boiga​ cynodon,Boiga cynodon,Fix hidden character (merge),Invisible zero-width character inside the name,,Boiga cynodon
+Chrysopelea​ pelias,Chrysopelea pelias,Fix hidden character,Invisible zero-width character inside the name,,Chrysopelea pelias
+Enhydris​ chanardi,Enhydris chanardi,Fix hidden character (merge),Invisible zero-width character inside the name,,Enhydris chanardi
+Pseudoxenodon macrops​,Pseudoxenodon macrops,Fix hidden character,Invisible zero-width character at the end of the name,,Pseudoxenodon macrops
+Rhabdophis​ nigrocinctus,Rhabdophis nigrocinctus,Fix hidden character,Invisible zero-width character inside the name,,Rhabdophis nigrocinctus
+Trimeresurus​ cardamom​ensis​,Trimeresurus cardamomensis,Fix hidden character (merge),Invisible zero-width characters inside the name,,Trimeresurus cardamomensis
+Naja Kaouthia,Naja kaouthia,Fix capitalisation (merge),Species epithet must be lower case,,Naja kaouthia
+xenochrophis flavipunctatus,Fowlea flavipunctatus,Fix capitalisation + synonym (merge),Lower-case genus; GBIF accepted name is Fowlea flavipunctatus,,Fowlea flavipunctatus
+Rhabdophis chrysagos,Rhabdophis chrysargos,Fix spelling (merge),GBIF variant match (95) to Rhabdophis chrysargos,,Rhabdophis chrysargos
+Dendrelaphis coudolineatus,Dendrelaphis caudolineatus,Fix spelling (merge),GBIF variant match (96) to Dendrelaphis caudolineatus,,Dendrelaphis caudolineatus
+Sinomicrurus maclellandi,Sinomicrurus macclellandi,Fix spelling (merge),GBIF variant match (98) to Sinomicrurus macclellandi,,Sinomicrurus macclellandi
+Calliophis bivirgata flaviceps,Calliophis bivirgatus,Fix spelling + subspecies to species (merge),Variant spelling of Calliophis bivirgatus flaviceps,,Calliophis bivirgatus
+Elaphe taeniura yunanensis,Elaphe taeniura,Fix spelling + subspecies to species (merge),Misspelled yunnanensis; species level,,Elaphe taeniura
+Ptyas mucosus,Ptyas mucosa,Merge synonym,Older spelling; GBIF variant match (98) to Ptyas mucosa,,Ptyas mucosa
+Enhydris plumbea,Hypsiscopus plumbea,Merge synonym,"GBIF: synonym of Hypsiscopus plumbea, which is also a local label",,Hypsiscopus plumbea
+Dinodon septentrionalis,Lycodon septentrionalis,Merge synonym,"GBIF: synonym of Lycodon septentrionalis, which is also a local label",,Lycodon septentrionalis
+Xenochrophis flavipunctatus,Fowlea flavipunctatus,Rename synonym,GBIF: synonym of Fowlea flavipunctatus,,Fowlea flavipunctatus
+Orthriophis taeniurus ridleyi,Elaphe taeniura,Merge synonym + subspecies to species,GBIF: synonym of Elaphe taeniura ridleyi; species level,,Elaphe taeniura
+Bungarus wanghaotingi,Bungarus wanghaotingi,Keep (check name),GBIF lists it as a synonym of Bungarus multicinctus; no B. multicinctus label exists locally,,Bungarus wanghaotingi
+Calliophis maculiceps maculiceps,Calliophis maculiceps,Subspecies to species (merge),Species level,,Calliophis maculiceps
+Calliophis maculiceps smithi,Calliophis maculiceps,Subspecies to species (merge),Species level,,Calliophis maculiceps
+Calliophis bivirgatus flaviceps,Calliophis bivirgatus,Subspecies to species,Species level,,Calliophis bivirgatus
+Calliophis intestinalis lineata,Calliophis intestinalis,Subspecies to species,Species level,,Calliophis intestinalis
+Oreocryptophis porphyraceus porphyraceus,Oreocryptophis porphyraceus,Subspecies to species (merge),Species level,,Oreocryptophis porphyraceus
+Oreocryptophis porphyraceus pulchra,Oreocryptophis porphyraceus,Subspecies to species (merge),Species level,,Oreocryptophis porphyraceus
+Ovophis monticola meridionalis,Ovophis monticola,Subspecies to species (merge),Species level; merges with the 3 'Ovophis monticola' images,,Ovophis monticola
+Elaphe taeniura helfenbergeri,Elaphe taeniura,Subspecies to species (merge),Species level,,Elaphe taeniura
+Elaphe taeniura ridleyi,Elaphe taeniura,Subspecies to species (merge),Species level,,Elaphe taeniura
+Elaphe taeniura spp.,Elaphe taeniura,Subspecies to species (merge),Species identified; subspecies unspecified,,Elaphe taeniura
+Pareas berdmorei berdmorei,Pareas berdmorei,Subspecies to species,"Species level; kept separate from P. carinatus (author decision, 7 Oct 2026)",,Pareas berdmorei
+Trimeresurus sabahi fucatus,Trimeresurus sabahi,Subspecies to species (merge),Species level; merges with the 23 'Trimeresurus sabahi' images,,Trimeresurus sabahi
+Ahaetulla sp.,,Remove (genus only),Not identified to species,,
+boiga sp.,,Remove (genus only),Not identified to species,,
+Bungarus sp.,,Remove (genus only),Not identified to species,,
+Dendrelaphis sp.,,Remove (genus only),Not identified to species,,
+Homalopsis sp.,,Remove (genus only),Not identified to species,,
+Indotyphlops sp.,,Remove (genus only),Not identified to species,,
+Lycodon sp.,,Remove (genus only),Not identified to species,,
+Naja sp.,,Remove (genus only),Not identified to species,,
+Oligodon sp.,,Remove (genus only),Not identified to species,,
+Pareas sp.,,Remove (genus only),Not identified to species,,
+Ptyas sp.,,Remove (genus only),Not identified to species,,
+Python sp.,,Remove (genus only),Not identified to species,,
+Trimeresurus sp.,,Remove (genus only),Not identified to species,,
+Xenochrophis sp.,,Remove (genus only),Not identified to species,,
+Xenochrophis spp.,,Remove (genus only),Not identified to species,,
+Naja sp. nov.,,Remove (undescribed species),Not a named species,,
+Xenochrophis piscator,Fowlea flavipunctatus,Merge synonym (author decision),Thai snakes once called X. piscator are now usually assigned to Fowlea flavipunctatus; author approved the merge on 7 Oct 2026,Distinct species from Fowlea flavipunctatus; reverses the merge of 7 Oct 2026,Fowlea piscator
+Pareas malaccanus,Pareas malaccanus,Keep (check name),GBIF found no species-level match,Current genus and name; merges with Asthenodipsas malaccanus,Asthenodipsas malaccana
+Asthenodipsas malaccanus,,,,Current name (feminine ending),Asthenodipsas malaccana

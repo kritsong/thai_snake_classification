@@ -1,0 +1,10 @@
+model,selected_recipe,cv_accuracy,system,low_recipe_system,strong_system
+MobileNetV3-Small,strong,0.2742776198234199,MobileNetV3-Small (strong),MobileNetV3-Small (fine_tune+low),MobileNetV3-Small (strong)
+EfficientNet-B0,fine_tune+low,0.3529111217388295,EfficientNet-B0 (fine_tune+low),EfficientNet-B0 (fine_tune+low),EfficientNet-B0 (strong)
+ResNet-50,fine_tune+low,0.3868155405482721,ResNet-50 (fine_tune+low),ResNet-50 (fine_tune+low),ResNet-50 (strong)
+ViT-Base/16,strong,0.5166139843135111,ViT-Base/16 (strong),ViT-Base/16 (fine_tune+low),ViT-Base/16 (strong)
+DeiT-Base/16,strong,0.5023699855196255,DeiT-Base/16 (strong),DeiT-Base/16 (fine_tune+low),DeiT-Base/16 (strong)
+Swin-Base,strong,0.5837963550368558,Swin-Base (strong),Swin-Base (fine_tune+low),Swin-Base (strong)
+ConvNeXt-V2-Base,strong,0.6134362269172831,"ConvNeXt-V2-B 224, cross-entropy",ConvNeXt-V2-Base (fine_tune+low),"ConvNeXt-V2-B 224, cross-entropy"
+DINOv2-Base/14,strong,0.6295590468087421,DINOv2-Base/14 (strong),DINOv2-Base/14 (fine_tune+low),DINOv2-Base/14 (strong)
+BioCLIP-2,strong,0.6495908956359193,BioCLIP-2 (strong),BioCLIP-2 (frozen+low),BioCLIP-2 (strong)

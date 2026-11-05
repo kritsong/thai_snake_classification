@@ -1,0 +1,52 @@
+{
+  "built_utc": "2026-10-20T13:06:33.405401+00:00",
+  "inputs": {
+    "v4_manifest_sha256": "10c26f99fc31468475ec1099176d10e97d11427d71f61a99e40c11f62c856dc0"
+  },
+  "manifest_sha256": "542e09c4bd9eec06dd8fed38e114b2c13c9b50d6da7662bd279e9d4a114c764b",
+  "images": 26368,
+  "species": 139,
+  "components": 12022,
+  "split_images": {
+    "development": 21101,
+    "test": 5267
+  },
+  "split_components": {
+    "development": 9614,
+    "test": 2408
+  },
+  "test_share_of_images": 0.1997,
+  "species_with_test_images": 106,
+  "species_development_only": 33,
+  "rare_species_locked_to_development": 34,
+  "locked_components": 78,
+  "locked_images": 276,
+  "split_adjustments": {
+    "development_to_test": 15
+  },
+  "fold_images": {
+    "1": 4143,
+    "2": 4087,
+    "3": 4368,
+    "4": 4230,
+    "5": 4273
+  },
+  "split_rule": "first fold of StratifiedGroupKFold(n_splits=5, shuffle=True, random_state=20260925) over eligible components, stratified by species, then each untested species with >=3 components gets its smallest unlocked development component when it keeps >=2 in development; components with a species seen in <3 components or with recovered/name-fixed images are development-only",
+  "fold_rule": "StratifiedGroupKFold(n_splits=5, shuffle=True, random_state=20260925) over development components",
+  "scikit_learn": "1.7.2",
+  "image_cache": "RGB, shorter side resized to 448 px with Lanczos when larger (never upscaled), JPEG quality 95, 4:4:4; EXIF orientation not applied",
+  "checks": "source bytes verified in v3 build and for re-added images; no component, row, or content hash crosses development/test or CV folds",
+  "taxonomy_revision": {
+    "decided_by": "N. Ratnarathorn, 20 October 2026",
+    "split": "Xenochrophis piscator records (49 images) from Fowlea flavipunctatus to Fowlea piscator",
+    "merge": "Pareas malaccanus and Asthenodipsas malaccanus (5 images) to Asthenodipsas malaccana",
+    "kept": "Bungarus wanghaotingi, Trimeresurus sabahi, Ovophis monticola",
+    "split_and_folds": "v4 split and CV folds kept unchanged (no re-split)"
+  },
+  "changed_images": {
+    "development": 45,
+    "test": 9
+  },
+  "v4_species_with_test_images": 105,
+  "v4_species_development_only": 34
+}

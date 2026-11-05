@@ -1,0 +1,297 @@
+{
+  "manifest_sha256": "542e09c4bd9eec06dd8fed38e114b2c13c9b50d6da7662bd279e9d4a114c764b",
+  "model": "open_clip:ViT-L-14/laion2b_s32b_b82k",
+  "open_clip": "3.3.0",
+  "labels": [
+    "Acrochordus granulatus",
+    "Acrochordus javanicus",
+    "Ahaetulla fasciolata",
+    "Ahaetulla nasuta",
+    "Ahaetulla prasina",
+    "Amphiesma stolatum",
+    "Aplopeltura boa",
+    "Argyrophis diardii",
+    "Argyrophis muelleri",
+    "Asthenodipsas malaccana",
+    "Boiga bengkuluensis",
+    "Boiga cyanea",
+    "Boiga cynodon",
+    "Boiga drapiezii",
+    "Boiga melanota",
+    "Boiga multomaculata",
+    "Boiga nigriceps",
+    "Boiga siamensis",
+    "Bungarus fasciatus",
+    "Bungarus flaviceps",
+    "Bungarus wanghaotingi",
+    "Calamaria lumbricoidea",
+    "Calamaria pavimentata",
+    "Calliophis bivirgatus",
+    "Calliophis gracilis",
+    "Calliophis intestinalis",
+    "Calliophis maculiceps",
+    "Calloselasma rhodostoma",
+    "Cantoria violacea",
+    "Cerberus schneiderii",
+    "Chrysopelea ornata",
+    "Chrysopelea paradisi",
+    "Chrysopelea pelias",
+    "Coelognathus flavolineatus",
+    "Coelognathus radiatus",
+    "Cylindrophis jodiae",
+    "Daboia siamensis",
+    "Dendrelaphis caudolineatus",
+    "Dendrelaphis cyanochloris",
+    "Dendrelaphis formosus",
+    "Dendrelaphis haasi",
+    "Dendrelaphis kopsteini",
+    "Dendrelaphis nigroserratus",
+    "Dendrelaphis pictus",
+    "Dendrelaphis striatus",
+    "Dendrelaphis subocularis",
+    "Dendrelaphis vogeli",
+    "Dryophiops rubescens",
+    "Elaphe taeniura",
+    "Enhydris chanardi",
+    "Enhydris enhydris",
+    "Enhydris subtaeniata",
+    "Erpeton tentaculatum",
+    "Fowlea flavipunctatus",
+    "Fowlea piscator",
+    "Gongylosoma scriptum",
+    "Gonyosoma oxycephalum",
+    "Hebius deschauenseei",
+    "Hebius khasiensis",
+    "Homalopsis buccata",
+    "Homalopsis mereljcoxi",
+    "Homalopsis nigroventralis",
+    "Hydrophis curtus",
+    "Hydrophis cyanocinctus",
+    "Hydrophis platurus",
+    "Hypsiscopus plumbea",
+    "Indotyphlops braminus",
+    "Indotyphlops porrectus",
+    "Laticauda colubrina",
+    "Laticauda laticaudata",
+    "Lycodon capucinus",
+    "Lycodon cardamomensis",
+    "Lycodon davisonii",
+    "Lycodon effraenis",
+    "Lycodon fasciatus",
+    "Lycodon laoensis",
+    "Lycodon ophiophagus",
+    "Lycodon septentrionalis",
+    "Lycodon subannulatus",
+    "Lycodon subcinctus",
+    "Malayopython reticulatus",
+    "Naja kaouthia",
+    "Naja siamensis",
+    "Naja sumatrana",
+    "Oligodon barroni",
+    "Oligodon cinereus",
+    "Oligodon cyclurus",
+    "Oligodon deuvei",
+    "Oligodon fasciolatus",
+    "Oligodon mouhoti",
+    "Oligodon phangan",
+    "Oligodon purpurascens",
+    "Oligodon signatus",
+    "Oligodon taeniatus",
+    "Ophiophagus hannah",
+    "Oreocryptophis porphyraceus",
+    "Ovophis monticola",
+    "Pareas berdmorei",
+    "Pareas carinatus",
+    "Pareas hamptoni",
+    "Pareas macularius",
+    "Pareas margaritophorus",
+    "Plagiopholis nuchalis",
+    "Psammodynastes pulverulentus",
+    "Psammophis indochinensis",
+    "Pseudorabdion longiceps",
+    "Pseudoxenodon macrops",
+    "Ptyas carinata",
+    "Ptyas fusca",
+    "Ptyas korros",
+    "Ptyas mucosa",
+    "Python bivittatus",
+    "Python brongersmai",
+    "Rhabdophis chrysargos",
+    "Rhabdophis nigrocinctus",
+    "Rhabdophis subminiatus",
+    "Sibynophis collaris",
+    "Sibynophis melanocephalus",
+    "Sibynophis triangularis",
+    "Sinomicrurus macclellandi",
+    "Subsessor bocourti",
+    "Trimeresurus albolabris",
+    "Trimeresurus cardamomensis",
+    "Trimeresurus gumprechti",
+    "Trimeresurus guoi",
+    "Trimeresurus hageni",
+    "Trimeresurus kanburiensis",
+    "Trimeresurus lanna",
+    "Trimeresurus macrops",
+    "Trimeresurus phuketensis",
+    "Trimeresurus popeiorum",
+    "Trimeresurus purpureomaculatus",
+    "Trimeresurus sabahi",
+    "Trimeresurus venustus",
+    "Trimeresurus vogeli",
+    "Trimerodytes yunnanensis",
+    "Tropidolaemus wagleri",
+    "Xenochrophis trianguligerus",
+    "Xenopeltis unicolor"
+  ],
+  "input": "v4 cache; RGB; BioCLIP 2 eval preprocessing (bicubic shorter side 224, center crop 224, CLIP mean/std); float16 autocast",
+  "features": "L2-normalised 768-d image embeddings",
+  "feature_seconds": 0.27172200003406033,
+  "zero_shot": {
+    "text": "TreeOfLife-200M taxonomic string + common name when listed; mean of 80 OpenAI ImageNet templates",
+    "text_sources": {
+      "treeoflife": 134,
+      "congener_ranks": 3,
+      "treeoflife_synonym": 2
+    },
+    "logit_scale": 99.99800109863281,
+    "development_all_images": {
+      "accuracy": 0.029761622671911285,
+      "balanced_accuracy": 0.04237066544281874,
+      "macro_f1": 0.012580310907570202,
+      "kappa": 0.019495130094095314,
+      "top3_accuracy": 0.0757310080090991
+    },
+    "test": {
+      "point": {
+        "accuracy": 0.02696031896715398,
+        "balanced_accuracy": 0.04272509214416819,
+        "macro_f1": 0.012198580464890384,
+        "kappa": 0.01727926916562783,
+        "top3_accuracy": 0.07347636225555344
+      },
+      "group_bootstrap_95ci": {
+        "accuracy": [
+          0.02102619032449881,
+          0.03372984954091717
+        ],
+        "balanced_accuracy": [
+          0.02639719556075393,
+          0.05851672977382574
+        ],
+        "macro_f1": [
+          0.008822459327052872,
+          0.01580940095337675
+        ],
+        "kappa": [
+          0.011446684927016384,
+          0.02381403088159314
+        ],
+        "top3_accuracy": [
+          0.06306034794840765,
+          0.08561651613824424
+        ]
+      }
+    }
+  },
+  "probe": {
+    "classifier": "StandardScaler (training part only) + balanced multinomial logistic regression C=1, lbfgs, max_iter=2000, tol=1e-5",
+    "scikit_learn": "1.7.2",
+    "cv": {
+      "folds": [
+        {
+          "fold": 1,
+          "lbfgs_iterations": 287,
+          "accuracy": 0.3697803524016413,
+          "balanced_accuracy": 0.19070412549245658,
+          "macro_f1": 0.15606631214305045,
+          "kappa": 0.3437485667555228,
+          "top3_accuracy": 0.5908761766835626
+        },
+        {
+          "fold": 2,
+          "lbfgs_iterations": 291,
+          "accuracy": 0.3728896501101052,
+          "balanced_accuracy": 0.19067692828876118,
+          "macro_f1": 0.16499684874940568,
+          "kappa": 0.348886024327527,
+          "top3_accuracy": 0.6045999510643504
+        },
+        {
+          "fold": 3,
+          "lbfgs_iterations": 295,
+          "accuracy": 0.37042124542124544,
+          "balanced_accuracy": 0.20206385634348223,
+          "macro_f1": 0.1704416756518817,
+          "kappa": 0.34620231282836844,
+          "top3_accuracy": 0.5936355311355311
+        },
+        {
+          "fold": 4,
+          "lbfgs_iterations": 279,
+          "accuracy": 0.3654846335697399,
+          "balanced_accuracy": 0.20617142065887023,
+          "macro_f1": 0.18835037008053163,
+          "kappa": 0.3403460863022393,
+          "top3_accuracy": 0.5981087470449172
+        },
+        {
+          "fold": 5,
+          "lbfgs_iterations": 285,
+          "accuracy": 0.365551135033934,
+          "balanced_accuracy": 0.18727221958609958,
+          "macro_f1": 0.1626466369341691,
+          "kappa": 0.3403718666091623,
+          "top3_accuracy": 0.5993447226772759
+        }
+      ],
+      "mean": {
+        "accuracy": 0.36882540330733316,
+        "balanced_accuracy": 0.19537771007393395,
+        "macro_f1": 0.1685003687118077,
+        "kappa": 0.34391097136456394,
+        "top3_accuracy": 0.5973130257211274
+      },
+      "sd": {
+        "accuracy": 0.003234900194167743,
+        "balanced_accuracy": 0.008228721930068614,
+        "macro_f1": 0.012236603057839033,
+        "kappa": 0.0037169019667717667,
+        "top3_accuracy": 0.0053107729631370676
+      }
+    },
+    "final": {
+      "lbfgs_iterations": 310,
+      "test_images": 5267,
+      "test_groups": 2408,
+      "point": {
+        "accuracy": 0.3601670780330359,
+        "balanced_accuracy": 0.24520337644326107,
+        "macro_f1": 0.21977315315393137,
+        "kappa": 0.3354423958023125,
+        "top3_accuracy": 0.6064173153597874
+      },
+      "group_bootstrap_95ci": {
+        "accuracy": [
+          0.34126334604183317,
+          0.3792971208187296
+        ],
+        "balanced_accuracy": [
+          0.2230310654174472,
+          0.2813801026554261
+        ],
+        "macro_f1": [
+          0.19371206811039363,
+          0.24605896272266223
+        ],
+        "kappa": [
+          0.3157302505419962,
+          0.35510351191937517
+        ],
+        "top3_accuracy": [
+          0.5847660960054544,
+          0.6264449473204851
+        ]
+      }
+    }
+  }
+}

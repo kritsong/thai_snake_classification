@@ -1,0 +1,13 @@
+system,label,venomous_images,mivs_to_non_mivs,mivs_to_venomous_non_mivs,mivs_to_non_venomous,mivs_to_unflagged,non_venomous_share,unflagged_share
+MobileNetV3-Small (strong),MobileNetV3-Small,810,582,9,573,0,0.7074074074074074,0.0
+EfficientNet-B0 (strong),EfficientNet-B0,810,483,7,476,0,0.5876543209876544,0.0
+ResNet-50 (strong),ResNet-50,810,524,7,517,0,0.6382716049382716,0.0
+ViT-Base/16 (strong),ViT-Base/16,810,360,8,352,0,0.4345679012345679,0.0
+DeiT-Base/16 (strong),DeiT-Base/16,810,376,11,365,0,0.4506172839506173,0.0
+Swin-Base (strong),Swin-Base,810,294,9,285,0,0.3518518518518518,0.0
+"ConvNeXt-V2-B 224, cross-entropy",ConvNeXt-V2-Base,810,251,5,246,0,0.3037037037037037,0.0
+DINOv2-Base/14 (strong),DINOv2 ViT-B/14,810,270,6,264,0,0.3259259259259259,0.0
+BioCLIP-2 (strong),BioCLIP 2 ViT-L/14,810,224,17,207,0,0.2555555555555555,0.0
+"ConvNeXt-V2-B 384, cross-entropy","ConvNeXt-V2-Base, 384 px",810,183,10,173,0,0.2135802469135802,0.0
+"ConvNeXt-V2-B 384, seesaw","ConvNeXt-V2-Base, 384 px, Seesaw",810,197,27,170,0,0.2098765432098765,0.0
+BioCLIP 2 zero-shot,BioCLIP 2 zero-shot,810,299,44,255,10,0.3148148148148148,0.0123456790123456

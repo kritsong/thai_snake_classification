@@ -1,0 +1,7 @@
+system_a,system_b,metric,mean_difference,min_difference,max_difference,same_sign_all_9
+"ConvNeXt-V2-B 384, cross-entropy","ConvNeXt-V2-B 384, seesaw",accuracy,0.0123409910765142,0.0083539016517941,0.0149990506929941,True
+"ConvNeXt-V2-B 384, cross-entropy","ConvNeXt-V2-B 384, seesaw",balanced_accuracy,-0.0566104705930248,-0.0825411966297778,-0.0341832161446815,True
+"ConvNeXt-V2-B 384, cross-entropy","ConvNeXt-V2-B 224, cross-entropy",accuracy,0.0953737105246502,0.0924625023732674,0.0975887602050503,True
+"ConvNeXt-V2-B 384, cross-entropy","ConvNeXt-V2-B 224, cross-entropy",balanced_accuracy,0.1030350872253624,0.0920361359069605,0.1150505927566202,True
+BioCLIP-2 (strong recipe),DINOv2-Base/14 (strong recipe),accuracy,0.0120878425416113,0.0043668122270742,0.0191760015188912,True
+BioCLIP-2 (strong recipe),DINOv2-Base/14 (strong recipe),balanced_accuracy,0.0309494230181293,0.0181284814753291,0.0385597737855059,True
