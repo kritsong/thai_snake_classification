@@ -1,0 +1,14 @@
+{
+  "system": "ConvNeXt-V2-B 224, cross-entropy",
+  "repeat": 2,
+  "seed": 20263925,
+  "point": {
+    "accuracy": 0.6157205240174672,
+    "balanced_accuracy": 0.3346561337471643,
+    "macro_f1": 0.32519775130249495,
+    "kappa": 0.5976226523586355,
+    "top3_accuracy": 0.8065312322004936
+  },
+  "refit_epochs": 15,
+  "training_seconds": 4365.693072900001
+}

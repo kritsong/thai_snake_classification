@@ -1,0 +1,61 @@
+{
+  "selection_rule": "highest five-fold mean accuracy within each architecture; macro-F1 then lower accuracy SD break ties",
+  "manifest_sha256": "542e09c4bd9eec06dd8fed38e114b2c13c9b50d6da7662bd279e9d4a114c764b",
+  "plan_sha256": "dee5cc305d05f5f3122bd52599a5284e72f58ee0d235f3dd061f8e385e6579e6",
+  "choices": {
+    "MobileNetV3-Small": {
+      "model": "MobileNetV3-Small",
+      "regime": "fine_tune",
+      "augmentation": "low",
+      "cv_accuracy": 0.2526050080084585,
+      "cv_macro_f1": 0.08423457490490469,
+      "cv_accuracy_sd": 0.008323343433946364,
+      "selected_final_epochs": 19
+    },
+    "EfficientNet-B0": {
+      "model": "EfficientNet-B0",
+      "regime": "fine_tune",
+      "augmentation": "low",
+      "cv_accuracy": 0.35291112173882955,
+      "cv_macro_f1": 0.13584738569706872,
+      "cv_accuracy_sd": 0.018666585500321714,
+      "selected_final_epochs": 14
+    },
+    "ResNet-50": {
+      "model": "ResNet-50",
+      "regime": "fine_tune",
+      "augmentation": "low",
+      "cv_accuracy": 0.38681554054827216,
+      "cv_macro_f1": 0.1617822200091295,
+      "cv_accuracy_sd": 0.009956193629509282,
+      "selected_final_epochs": 26
+    },
+    "ViT-Base/16": {
+      "model": "ViT-Base/16",
+      "regime": "fine_tune",
+      "augmentation": "low",
+      "cv_accuracy": 0.43945023114365045,
+      "cv_macro_f1": 0.19886739495523187,
+      "cv_accuracy_sd": 0.015673452372797072,
+      "selected_final_epochs": 11
+    },
+    "DeiT-Base/16": {
+      "model": "DeiT-Base/16",
+      "regime": "fine_tune",
+      "augmentation": "low",
+      "cv_accuracy": 0.44189423132167355,
+      "cv_macro_f1": 0.18234397101263675,
+      "cv_accuracy_sd": 0.009503228430038192,
+      "selected_final_epochs": 18
+    },
+    "Swin-Base": {
+      "model": "Swin-Base",
+      "regime": "fine_tune",
+      "augmentation": "low",
+      "cv_accuracy": 0.5580504679037377,
+      "cv_macro_f1": 0.26463973943139274,
+      "cv_accuracy_sd": 0.00541285603626943,
+      "selected_final_epochs": 40
+    }
+  }
+}

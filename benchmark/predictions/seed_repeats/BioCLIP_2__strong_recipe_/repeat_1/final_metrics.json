@@ -1,0 +1,14 @@
+{
+  "system": "BioCLIP-2 (strong recipe)",
+  "repeat": 1,
+  "seed": 20262925,
+  "point": {
+    "accuracy": 0.6487564078222897,
+    "balanced_accuracy": 0.38653026079851155,
+    "macro_f1": 0.38960190521448684,
+    "kappa": 0.6318237412106631,
+    "top3_accuracy": 0.8122270742358079
+  },
+  "refit_epochs": 15,
+  "training_seconds": 4383.0119228
+}

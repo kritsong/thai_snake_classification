@@ -1,0 +1,41 @@
+class_label,predicted_label,images,groups,true_test_images,true_status,predicted_status,same_genus,kind,system
+Homalopsis mereljcoxi,Homalopsis buccata,35,28,94,0,0,True,most_frequent,"ConvNeXt-V2-B 384, cross-entropy"
+Naja siamensis,Naja kaouthia,26,15,108,1,1,True,most_frequent,"ConvNeXt-V2-B 384, cross-entropy"
+Oligodon mouhoti,Oligodon taeniatus,24,14,50,0,0,True,most_frequent,"ConvNeXt-V2-B 384, cross-entropy"
+Ptyas mucosa,Ptyas korros,22,18,398,0,0,True,most_frequent,"ConvNeXt-V2-B 384, cross-entropy"
+Oligodon fasciolatus,Oligodon taeniatus,21,14,454,0,0,True,most_frequent,"ConvNeXt-V2-B 384, cross-entropy"
+Ptyas mucosa,Coelognathus radiatus,21,10,398,0,0,False,most_frequent,"ConvNeXt-V2-B 384, cross-entropy"
+Ptyas korros,Ptyas mucosa,20,13,213,0,0,True,most_frequent,"ConvNeXt-V2-B 384, cross-entropy"
+Fowlea flavipunctatus,Ptyas korros,19,12,238,0,0,False,most_frequent,"ConvNeXt-V2-B 384, cross-entropy"
+Naja kaouthia,Ptyas mucosa,19,10,210,1,0,False,most_frequent,"ConvNeXt-V2-B 384, cross-entropy"
+Homalopsis buccata,Homalopsis mereljcoxi,17,14,55,0,0,True,most_frequent,"ConvNeXt-V2-B 384, cross-entropy"
+Naja kaouthia,Ptyas mucosa,19,10,210,1,0,False,venomous_to_harmless,"ConvNeXt-V2-B 384, cross-entropy"
+Naja kaouthia,Ptyas korros,13,8,210,1,0,False,venomous_to_harmless,"ConvNeXt-V2-B 384, cross-entropy"
+Naja kaouthia,Coelognathus radiatus,7,5,210,1,0,False,venomous_to_harmless,"ConvNeXt-V2-B 384, cross-entropy"
+Bungarus wanghaotingi,Cylindrophis jodiae,5,4,90,1,0,False,venomous_to_harmless,"ConvNeXt-V2-B 384, cross-entropy"
+Naja siamensis,Ptyas mucosa,5,4,108,1,0,False,venomous_to_harmless,"ConvNeXt-V2-B 384, cross-entropy"
+Trimeresurus albolabris,Ahaetulla prasina,5,4,103,1,0,False,venomous_to_harmless,"ConvNeXt-V2-B 384, cross-entropy"
+Naja kaouthia,Chrysopelea ornata,5,1,210,1,0,False,venomous_to_harmless,"ConvNeXt-V2-B 384, cross-entropy"
+Tropidolaemus wagleri,Trimeresurus popeiorum,5,1,26,1,0,False,venomous_to_harmless,"ConvNeXt-V2-B 384, cross-entropy"
+Calloselasma rhodostoma,Malayopython reticulatus,4,4,63,1,0,False,venomous_to_harmless,"ConvNeXt-V2-B 384, cross-entropy"
+Naja kaouthia,Oligodon fasciolatus,4,4,210,1,0,False,venomous_to_harmless,"ConvNeXt-V2-B 384, cross-entropy"
+Ptyas korros,Ptyas mucosa,30,14,213,0,0,True,most_frequent,BioCLIP-2 (strong)
+Ptyas mucosa,Ptyas korros,29,16,398,0,0,True,most_frequent,BioCLIP-2 (strong)
+Ptyas mucosa,Chrysopelea ornata,28,16,398,0,0,False,most_frequent,BioCLIP-2 (strong)
+Oligodon mouhoti,Oligodon taeniatus,23,11,50,0,0,True,most_frequent,BioCLIP-2 (strong)
+Oligodon fasciolatus,Coelognathus radiatus,23,9,454,0,0,False,most_frequent,BioCLIP-2 (strong)
+Coelognathus radiatus,Ptyas mucosa,22,17,219,0,0,False,most_frequent,BioCLIP-2 (strong)
+Homalopsis mereljcoxi,Homalopsis buccata,19,18,94,0,0,True,most_frequent,BioCLIP-2 (strong)
+Ptyas mucosa,Naja kaouthia,19,12,398,0,1,False,most_frequent,BioCLIP-2 (strong)
+Naja siamensis,Naja kaouthia,18,12,108,1,1,True,most_frequent,BioCLIP-2 (strong)
+Naja kaouthia,Ptyas mucosa,18,10,210,1,0,False,most_frequent,BioCLIP-2 (strong)
+Naja kaouthia,Ptyas mucosa,18,10,210,1,0,False,venomous_to_harmless,BioCLIP-2 (strong)
+Naja kaouthia,Ptyas korros,13,7,210,1,0,False,venomous_to_harmless,BioCLIP-2 (strong)
+Naja kaouthia,Malayopython reticulatus,11,6,210,1,0,False,venomous_to_harmless,BioCLIP-2 (strong)
+Naja kaouthia,Oligodon fasciolatus,9,6,210,1,0,False,venomous_to_harmless,BioCLIP-2 (strong)
+Naja kaouthia,Xenopeltis unicolor,9,4,210,1,0,False,venomous_to_harmless,BioCLIP-2 (strong)
+Naja kaouthia,Chrysopelea ornata,9,3,210,1,0,False,venomous_to_harmless,BioCLIP-2 (strong)
+Calloselasma rhodostoma,Malayopython reticulatus,8,4,63,1,0,False,venomous_to_harmless,BioCLIP-2 (strong)
+Naja siamensis,Ptyas mucosa,7,3,108,1,0,False,venomous_to_harmless,BioCLIP-2 (strong)
+Naja siamensis,Oligodon fasciolatus,6,5,108,1,0,False,venomous_to_harmless,BioCLIP-2 (strong)
+Ophiophagus hannah,Malayopython reticulatus,6,2,59,1,0,False,venomous_to_harmless,BioCLIP-2 (strong)

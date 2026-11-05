@@ -1,0 +1,33 @@
+{
+  "source_manifest_sha256": "3ce84aabcec5cb5d7476963e8aa85c9bbcdcb9eff961027bccc2f486ed25e2c7",
+  "scope_sha256": "0fb5f4bf78c1c76df4d59ea7efa83b8a132c3e2b9571bc8c23979c7e74d5e27b",
+  "images": 368,
+  "observations": 201,
+  "species": 82,
+  "matched_by_approved_mapping": [
+    "Bungarus multicinctus -> Bungarus wanghaotingi",
+    "Fowlea flavipunctata -> Fowlea flavipunctatus"
+  ],
+  "unmatched_snakeclef_names": [
+    "Ahaetulla fusca",
+    "Ahaetulla mycterizans",
+    "Bungarus candidus",
+    "Cerberus rynchops",
+    "Dendrelaphis ngansonensis",
+    "Gonyosoma coeruleum",
+    "Lycodon albofuscus",
+    "Lycodon butleri",
+    "Oligodon pseudotaeniatus",
+    "Pareas geminatus",
+    "Ptyas multicincta",
+    "Rhabdophis flaviceps",
+    "Rhabdophis helleri",
+    "Rhabdophis siamensis",
+    "Trimeresurus kuiburi",
+    "Trimeresurus sumatranus"
+  ],
+  "excluded_observations": [
+    "96180737"
+  ],
+  "rule": "SnakeCLEF name equals a model class after the approved local name mapping; no other equivalence; observation-level probability averaging at evaluation"
+}

@@ -1,0 +1,14 @@
+{
+  "system": "ConvNeXt-V2-B 384, seesaw",
+  "repeat": 2,
+  "seed": 20263925,
+  "point": {
+    "accuracy": 0.6998291247389405,
+    "balanced_accuracy": 0.48252448891037153,
+    "macro_f1": 0.41006206187141914,
+    "kappa": 0.6866789133571856,
+    "top3_accuracy": 0.8452629580406303
+  },
+  "refit_epochs": 15,
+  "training_seconds": 4710.960950299996
+}

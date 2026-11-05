@@ -1,0 +1,16 @@
+{
+  "selection_rule": "highest five-fold mean accuracy within each architecture; macro-F1 then lower accuracy SD break ties",
+  "manifest_sha256": "542e09c4bd9eec06dd8fed38e114b2c13c9b50d6da7662bd279e9d4a114c764b",
+  "plan_sha256": "28287c1d387159461d240faf79b1d68b9477bb7d9da46ca8d4661433aba31d87",
+  "choices": {
+    "BioCLIP-2": {
+      "model": "BioCLIP-2",
+      "regime": "frozen",
+      "augmentation": "low",
+      "cv_accuracy": 0.6429822363915361,
+      "cv_macro_f1": 0.36139256067488623,
+      "cv_accuracy_sd": 0.0061897575334368396,
+      "selected_final_epochs": 14
+    }
+  }
+}

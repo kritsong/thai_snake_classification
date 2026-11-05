@@ -1,0 +1,25 @@
+{
+  "selection_rule": "highest five-fold mean accuracy within each architecture; macro-F1 then lower accuracy SD break ties",
+  "manifest_sha256": "542e09c4bd9eec06dd8fed38e114b2c13c9b50d6da7662bd279e9d4a114c764b",
+  "plan_sha256": "c4c240a3f043e77a4cbd65e144e14fbc20ccc9eb4fe21c5b7595e1669ea47e65",
+  "choices": {
+    "ConvNeXt-V2-Base": {
+      "model": "ConvNeXt-V2-Base",
+      "regime": "fine_tune",
+      "augmentation": "low",
+      "cv_accuracy": 0.4723965067058592,
+      "cv_macro_f1": 0.2148142749612049,
+      "cv_accuracy_sd": 0.009505404576292419,
+      "selected_final_epochs": 11
+    },
+    "DINOv2-Base/14": {
+      "model": "DINOv2-Base/14",
+      "regime": "fine_tune",
+      "augmentation": "low",
+      "cv_accuracy": 0.5796872177039734,
+      "cv_macro_f1": 0.2758626074083541,
+      "cv_accuracy_sd": 0.01417484091054457,
+      "selected_final_epochs": 16
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "system": "DINOv2-Base/14 (strong recipe)",
+  "repeat": 1,
+  "seed": 20262925,
+  "point": {
+    "accuracy": 0.639643060565787,
+    "balanced_accuracy": 0.35808382121167776,
+    "macro_f1": 0.3575158868897428,
+    "kappa": 0.622299246046763,
+    "top3_accuracy": 0.8230491741029049
+  },
+  "refit_epochs": 15,
+  "training_seconds": 2237.6316641999874
+}
