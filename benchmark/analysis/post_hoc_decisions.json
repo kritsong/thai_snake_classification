@@ -1,0 +1,701 @@
+{
+ "lambda_grid": [
+  0.0,
+  0.05,
+  0.1,
+  0.15,
+  0.2,
+  0.25,
+  0.3,
+  0.35,
+  0.4,
+  0.45,
+  0.5,
+  0.55,
+  0.6,
+  0.65,
+  0.7,
+  0.75,
+  0.8,
+  0.85,
+  0.9,
+  0.95,
+  1.0,
+  1.05,
+  1.1,
+  1.15,
+  1.2,
+  1.25,
+  1.3,
+  1.35,
+  1.4,
+  1.45,
+  1.5
+ ],
+ "targets": [
+  0.9,
+  0.95
+ ],
+ "bootstrap_resamples": 2000,
+ "venom_auc": {
+  "ConvNeXt-V2 384, cross-entropy": 0.9654351608278703,
+  "ConvNeXt-V2 384, Seesaw": 0.9644817459323284,
+  "BioCLIP 2 (224)": 0.939515915765446,
+  "DINOv2 (224)": 0.9388759447158546,
+  "ConvNeXt-V2 (224)": 0.93554302893649
+ },
+ "fusion_oof_accuracy": {
+  "ConvNeXt-V2 384, cross-entropy": {
+   "0.0": 0.6977868347471684,
+   "0.05": 0.7034737690156865,
+   "0.1": 0.7075494052414577,
+   "0.15": 0.7109141746836642,
+   "0.2": 0.7140893796502535,
+   "0.25": 0.7170750201412255,
+   "0.3": 0.7195867494431544,
+   "0.35": 0.7217193497938487,
+   "0.4": 0.723567603431117,
+   "0.45": 0.7252262925927682,
+   "0.5": 0.7257002037818113,
+   "0.55": 0.7262215060897588,
+   "0.6": 0.7267428083977062,
+   "0.65": 0.726553243922089,
+   "0.7": 0.7264584616842804,
+   "0.75": 0.7259371593763329,
+   "0.8": 0.7258897682574286,
+   "0.85": 0.7254632481872897,
+   "0.9": 0.7245154258092034,
+   "0.95": 0.7238045590256386,
+   "1.0": 0.7231410833609782,
+   "1.05": 0.7217193497938487,
+   "1.1": 0.7203923984645277,
+   "1.15": 0.7195393583242501,
+   "1.2": 0.7182597981138334,
+   "1.25": 0.7168854556656082,
+   "1.3": 0.7152267665039571,
+   "1.35": 0.7134732951044974,
+   "1.4": 0.711909388180655,
+   "1.45": 0.7105350457324298,
+   "1.5": 0.7084498365006398
+  },
+  "ConvNeXt-V2 384, Seesaw": {
+   "0.0": 0.6871712241126013,
+   "0.05": 0.6968390123690821,
+   "0.1": 0.7008198663570447,
+   "0.15": 0.7042794180370598,
+   "0.2": 0.707881143073788,
+   "0.25": 0.7108193924458557,
+   "0.3": 0.7122411260129852,
+   "0.35": 0.7140419885313493,
+   "0.4": 0.7161745888820436,
+   "0.45": 0.7169328467845126,
+   "0.5": 0.7175015402113644,
+   "0.55": 0.7171224112601299,
+   "0.6": 0.7173593668546514,
+   "0.65": 0.7168854556656082,
+   "0.7": 0.7151319842661485,
+   "0.75": 0.714610681958201,
+   "0.8": 0.7133785128666887,
+   "0.85": 0.7120041704184635,
+   "0.9": 0.710724610208047,
+   "0.95": 0.7083550542628312,
+   "1.0": 0.7067911473389886,
+   "1.05": 0.7032368134211648,
+   "1.1": 0.701009430832662,
+   "1.15": 0.6993981327899151,
+   "1.2": 0.6972655324392208,
+   "1.25": 0.6947538031372921,
+   "1.3": 0.6920999004786503,
+   "1.35": 0.6894933889389129,
+   "1.4": 0.686839486280271,
+   "1.45": 0.6846594948106725,
+   "1.5": 0.6816264632007961
+  }
+ },
+ "venom_alert": [
+  {
+   "system": "ConvNeXt-V2 384, cross-entropy",
+   "rule": "species (top-1 is MIVS)",
+   "threshold": null,
+   "oof_sensitivity": 0.7676579925650557,
+   "oof_false_alarm": 0.03707027087656329,
+   "test_sensitivity": 0.774074074074074,
+   "sensitivity_ci": [
+    0.7317948053397981,
+    0.8155692511081732
+   ],
+   "test_miss_rate": 0.22592592592592597,
+   "test_false_alarm": 0.032919954904171364,
+   "false_alarm_ci": [
+    0.025734541428036183,
+    0.04069705197608046
+   ],
+   "venomous_images": 810,
+   "harmless_images": 4435
+  },
+  {
+   "system": "ConvNeXt-V2 384, cross-entropy",
+   "rule": "P(MIVS) >= 0.5",
+   "threshold": 0.5,
+   "oof_sensitivity": 0.7311028500619579,
+   "oof_false_alarm": 0.023947058493634682,
+   "test_sensitivity": 0.7320987654320987,
+   "sensitivity_ci": [
+    0.6873415162578048,
+    0.777115961520007
+   ],
+   "test_miss_rate": 0.26790123456790127,
+   "test_false_alarm": 0.021871476888387822,
+   "false_alarm_ci": [
+    0.015716737163906327,
+    0.028445955890482547
+   ],
+   "venomous_images": 810,
+   "harmless_images": 4435
+  },
+  {
+   "system": "ConvNeXt-V2 384, cross-entropy",
+   "rule": "OOF sensitivity 90%",
+   "threshold": 0.09630471676499998,
+   "oof_sensitivity": 0.9002478314745973,
+   "oof_false_alarm": 0.12192249453199484,
+   "test_sensitivity": 0.9123456790123456,
+   "sensitivity_ci": [
+    0.8885565045600629,
+    0.9349498681051368
+   ],
+   "test_miss_rate": 0.08765432098765435,
+   "test_false_alarm": 0.10755355129650507,
+   "false_alarm_ci": [
+    0.09331470029592168,
+    0.1219414123677541
+   ],
+   "venomous_images": 810,
+   "harmless_images": 4435
+  },
+  {
+   "system": "ConvNeXt-V2 384, cross-entropy",
+   "rule": "OOF sensitivity 95%",
+   "threshold": 0.0336073276571,
+   "oof_sensitivity": 0.9501239157372986,
+   "oof_false_alarm": 0.22444058101059952,
+   "test_sensitivity": 0.9555555555555556,
+   "sensitivity_ci": [
+    0.9364143451616356,
+    0.9719303594351734
+   ],
+   "test_miss_rate": 0.0444444444444444,
+   "test_false_alarm": 0.2036076662908681,
+   "false_alarm_ci": [
+    0.18330516842753874,
+    0.22404858837869984
+   ],
+   "venomous_images": 810,
+   "harmless_images": 4435
+  },
+  {
+   "system": "ConvNeXt-V2 384, Seesaw",
+   "rule": "species (top-1 is MIVS)",
+   "threshold": null,
+   "oof_sensitivity": 0.7673482032218092,
+   "oof_false_alarm": 0.04323930233862375,
+   "test_sensitivity": 0.7567901234567901,
+   "sensitivity_ci": [
+    0.7102470230444463,
+    0.8024705532168219
+   ],
+   "test_miss_rate": 0.2432098765432099,
+   "test_false_alarm": 0.03945885005636979,
+   "false_alarm_ci": [
+    0.03155542648197708,
+    0.047871874816258306
+   ],
+   "venomous_images": 810,
+   "harmless_images": 4435
+  },
+  {
+   "system": "ConvNeXt-V2 384, Seesaw",
+   "rule": "P(MIVS) >= 0.5",
+   "threshold": 0.5,
+   "oof_sensitivity": 0.6837050805452293,
+   "oof_false_alarm": 0.01710504178116763,
+   "test_sensitivity": 0.6876543209876543,
+   "sensitivity_ci": [
+    0.6356572723689398,
+    0.7413615560640732
+   ],
+   "test_miss_rate": 0.31234567901234567,
+   "test_false_alarm": 0.016910935738444193,
+   "false_alarm_ci": [
+    0.01199604605816261,
+    0.021826526402100935
+   ],
+   "venomous_images": 810,
+   "harmless_images": 4435
+  },
+  {
+   "system": "ConvNeXt-V2 384, Seesaw",
+   "rule": "OOF sensitivity 90%",
+   "threshold": 0.12859400691,
+   "oof_sensitivity": 0.9002478314745973,
+   "oof_false_alarm": 0.12242723346979979,
+   "test_sensitivity": 0.9197530864197531,
+   "sensitivity_ci": [
+    0.8965478409443927,
+    0.9413996077058815
+   ],
+   "test_miss_rate": 0.08024691358024694,
+   "test_false_alarm": 0.11454340473506201,
+   "false_alarm_ci": [
+    0.10015662937234629,
+    0.12998238787248878
+   ],
+   "venomous_images": 810,
+   "harmless_images": 4435
+  },
+  {
+   "system": "ConvNeXt-V2 384, Seesaw",
+   "rule": "OOF sensitivity 95%",
+   "threshold": 0.06280190136000001,
+   "oof_sensitivity": 0.9501239157372986,
+   "oof_false_alarm": 0.22494531994840447,
+   "test_sensitivity": 0.9543209876543209,
+   "sensitivity_ci": [
+    0.9340627313101406,
+    0.9717315676585707
+   ],
+   "test_miss_rate": 0.04567901234567906,
+   "test_false_alarm": 0.20270574971815108,
+   "false_alarm_ci": [
+    0.18209167527427958,
+    0.2239109962739488
+   ],
+   "venomous_images": 810,
+   "harmless_images": 4435
+  },
+  {
+   "system": "BioCLIP 2 (224)",
+   "rule": "species (top-1 is MIVS)",
+   "threshold": null,
+   "oof_sensitivity": 0.7078686493184635,
+   "oof_false_alarm": 0.042061578150412206,
+   "test_sensitivity": 0.7234567901234568,
+   "sensitivity_ci": [
+    0.674984716859717,
+    0.7717693894236128
+   ],
+   "test_miss_rate": 0.27654320987654324,
+   "test_false_alarm": 0.05118376550169109,
+   "false_alarm_ci": [
+    0.04154690832802435,
+    0.06107191023004504
+   ],
+   "venomous_images": 810,
+   "harmless_images": 4435
+  },
+  {
+   "system": "BioCLIP 2 (224)",
+   "rule": "P(MIVS) >= 0.5",
+   "threshold": 0.5,
+   "oof_sensitivity": 0.6830855018587361,
+   "oof_false_alarm": 0.02989176153889294,
+   "test_sensitivity": 0.6839506172839506,
+   "sensitivity_ci": [
+    0.633829802883201,
+    0.7340951169528654
+   ],
+   "test_miss_rate": 0.31604938271604943,
+   "test_false_alarm": 0.033821871476888386,
+   "false_alarm_ci": [
+    0.02672976549730659,
+    0.04158507913273479
+   ],
+   "venomous_images": 810,
+   "harmless_images": 4435
+  },
+  {
+   "system": "BioCLIP 2 (224)",
+   "rule": "OOF sensitivity 90%",
+   "threshold": 0.039088864515,
+   "oof_sensitivity": 0.9002478314745973,
+   "oof_false_alarm": 0.20245639616398406,
+   "test_sensitivity": 0.9,
+   "sensitivity_ci": [
+    0.8715598384706491,
+    0.925428270713676
+   ],
+   "test_miss_rate": 0.09999999999999998,
+   "test_false_alarm": 0.19413754227733934,
+   "false_alarm_ci": [
+    0.1721057952765328,
+    0.2156959560215845
+   ],
+   "venomous_images": 810,
+   "harmless_images": 4435
+  },
+  {
+   "system": "BioCLIP 2 (224)",
+   "rule": "OOF sensitivity 95%",
+   "threshold": 0.011764884521249998,
+   "oof_sensitivity": 0.9501239157372986,
+   "oof_false_alarm": 0.3238180696539734,
+   "test_sensitivity": 0.945679012345679,
+   "sensitivity_ci": [
+    0.9236259652711731,
+    0.9645140136585003
+   ],
+   "test_miss_rate": 0.05432098765432103,
+   "test_false_alarm": 0.30214205186020293,
+   "false_alarm_ci": [
+    0.27851585052054156,
+    0.326731298255742
+   ],
+   "venomous_images": 810,
+   "harmless_images": 4435
+  },
+  {
+   "system": "DINOv2 (224)",
+   "rule": "species (top-1 is MIVS)",
+   "threshold": null,
+   "oof_sensitivity": 0.6985749690210656,
+   "oof_false_alarm": 0.05294150636531883,
+   "test_sensitivity": 0.6666666666666666,
+   "sensitivity_ci": [
+    0.616965157810336,
+    0.7175382083891121
+   ],
+   "test_miss_rate": 0.33333333333333337,
+   "test_false_alarm": 0.039909808342728295,
+   "false_alarm_ci": [
+    0.03287423025973695,
+    0.04711450471366375
+   ],
+   "venomous_images": 810,
+   "harmless_images": 4435
+  },
+  {
+   "system": "DINOv2 (224)",
+   "rule": "P(MIVS) >= 0.5",
+   "threshold": 0.5,
+   "oof_sensitivity": 0.6372366790582404,
+   "oof_false_alarm": 0.030228254164096236,
+   "test_sensitivity": 0.582716049382716,
+   "sensitivity_ci": [
+    0.5295520166403762,
+    0.6402809985175772
+   ],
+   "test_miss_rate": 0.41728395061728396,
+   "test_false_alarm": 0.02051860202931229,
+   "false_alarm_ci": [
+    0.015508649183919181,
+    0.025965669160567945
+   ],
+   "venomous_images": 810,
+   "harmless_images": 4435
+  },
+  {
+   "system": "DINOv2 (224)",
+   "rule": "OOF sensitivity 90%",
+   "threshold": 0.09033159049230002,
+   "oof_sensitivity": 0.9002478314745973,
+   "oof_false_alarm": 0.20312938141439066,
+   "test_sensitivity": 0.8962962962962963,
+   "sensitivity_ci": [
+    0.86211497205508,
+    0.9278749638509872
+   ],
+   "test_miss_rate": 0.10370370370370374,
+   "test_false_alarm": 0.171815107102593,
+   "false_alarm_ci": [
+    0.15535749577495714,
+    0.18824944998032506
+   ],
+   "venomous_images": 810,
+   "harmless_images": 4435
+  },
+  {
+   "system": "DINOv2 (224)",
+   "rule": "OOF sensitivity 95%",
+   "threshold": 0.038836771287499995,
+   "oof_sensitivity": 0.9501239157372986,
+   "oof_false_alarm": 0.3373338567663059,
+   "test_sensitivity": 0.9432098765432099,
+   "sensitivity_ci": [
+    0.9207892743948616,
+    0.9623203355846349
+   ],
+   "test_miss_rate": 0.05679012345679013,
+   "test_false_alarm": 0.30372040586245774,
+   "false_alarm_ci": [
+    0.28151888901559463,
+    0.32564008211705864
+   ],
+   "venomous_images": 810,
+   "harmless_images": 4435
+  },
+  {
+   "system": "ConvNeXt-V2 (224)",
+   "rule": "species (top-1 is MIVS)",
+   "threshold": null,
+   "oof_sensitivity": 0.6809169764560099,
+   "oof_false_alarm": 0.05181986428130783,
+   "test_sensitivity": 0.6901234567901234,
+   "sensitivity_ci": [
+    0.6414607077729656,
+    0.7373592202332705
+   ],
+   "test_miss_rate": 0.30987654320987656,
+   "test_false_alarm": 0.052311161217587374,
+   "false_alarm_ci": [
+    0.042548828551068195,
+    0.06350244053077726
+   ],
+   "venomous_images": 810,
+   "harmless_images": 4435
+  },
+  {
+   "system": "ConvNeXt-V2 (224)",
+   "rule": "P(MIVS) >= 0.5",
+   "threshold": 0.5,
+   "oof_sensitivity": 0.6267038413878563,
+   "oof_false_alarm": 0.029330940496887444,
+   "test_sensitivity": 0.6271604938271605,
+   "sensitivity_ci": [
+    0.5771182299294159,
+    0.674823580686142
+   ],
+   "test_miss_rate": 0.37283950617283945,
+   "test_false_alarm": 0.029988726042841037,
+   "false_alarm_ci": [
+    0.022670512668792168,
+    0.037878311678540486
+   ],
+   "venomous_images": 810,
+   "harmless_images": 4435
+  },
+  {
+   "system": "ConvNeXt-V2 (224)",
+   "rule": "OOF sensitivity 90%",
+   "threshold": 0.07273121675960001,
+   "oof_sensitivity": 0.9002478314745973,
+   "oof_false_alarm": 0.20969098760585497,
+   "test_sensitivity": 0.9024691358024691,
+   "sensitivity_ci": [
+    0.8758999696912511,
+    0.9289742313240378
+   ],
+   "test_miss_rate": 0.09753086419753088,
+   "test_false_alarm": 0.20789177001127396,
+   "false_alarm_ci": [
+    0.1882748759905332,
+    0.22732223876141408
+   ],
+   "venomous_images": 810,
+   "harmless_images": 4435
+  },
+  {
+   "system": "ConvNeXt-V2 (224)",
+   "rule": "OOF sensitivity 95%",
+   "threshold": 0.0308029062757,
+   "oof_sensitivity": 0.9501239157372986,
+   "oof_false_alarm": 0.33279120632606135,
+   "test_sensitivity": 0.9530864197530864,
+   "sensitivity_ci": [
+    0.9331486620252993,
+    0.9713037217163355
+   ],
+   "test_miss_rate": 0.04691358024691361,
+   "test_false_alarm": 0.33010146561443066,
+   "false_alarm_ci": [
+    0.3065619921573788,
+    0.35397486829325875
+   ],
+   "venomous_images": 810,
+   "harmless_images": 4435
+  }
+ ],
+ "fusion": [
+  {
+   "system": "ConvNeXt-V2 384, cross-entropy",
+   "lambda": 0.6,
+   "oof_accuracy_base": 0.6977868347471684,
+   "oof_accuracy_fused": 0.7267428083977062,
+   "test_accuracy_base": 0.7081830263907347,
+   "test_balanced_accuracy_base": 0.4294174899057563,
+   "test_macro_f1_tested_species_base": 0.43380218437624957,
+   "test_top3_accuracy_base": 0.8572242263147902,
+   "test_accuracy_fused": 0.7305866717296373,
+   "test_balanced_accuracy_fused": 0.5177833461458403,
+   "test_macro_f1_tested_species_fused": 0.512215177489078,
+   "test_top3_accuracy_fused": 0.887981773305487,
+   "accuracy_difference": 0.0224036453389026,
+   "accuracy_difference_ci": [
+    0.014013396580483756,
+    0.031214753231061612
+   ],
+   "accuracy_clustered_mcnemar_p": 2.283480049492476e-07,
+   "balanced_accuracy_difference_ci": [
+    0.07157978037923668,
+    0.0992153717712286
+   ],
+   "venom_to_harmless_base": 0.22592592592592592,
+   "venom_to_harmless_fused": 0.18024691358024691
+  },
+  {
+   "system": "ConvNeXt-V2 384, Seesaw",
+   "lambda": 0.5,
+   "oof_accuracy_base": 0.6871712241126013,
+   "oof_accuracy_fused": 0.7175015402113644,
+   "test_accuracy_base": 0.6948927283083349,
+   "test_balanced_accuracy_base": 0.474222999479447,
+   "test_macro_f1_tested_species_base": 0.4299925901893917,
+   "test_top3_accuracy_base": 0.8445035124359218,
+   "test_accuracy_fused": 0.7275488893108031,
+   "test_balanced_accuracy_fused": 0.5618635214907507,
+   "test_macro_f1_tested_species_fused": 0.5124109056827743,
+   "test_top3_accuracy_fused": 0.8781089804442757,
+   "accuracy_difference": 0.032656161002468154,
+   "accuracy_difference_ci": [
+    0.023809407665505145,
+    0.0407964950504298
+   ],
+   "accuracy_clustered_mcnemar_p": 4.4046725282449995e-13,
+   "balanced_accuracy_difference_ci": [
+    0.06943175964215818,
+    0.1028186296951211
+   ],
+   "venom_to_harmless_base": 0.24320987654320989,
+   "venom_to_harmless_fused": 0.19753086419753085
+  }
+ ],
+ "fusion_bands": [
+  {
+   "system": "ConvNeXt-V2 384, cross-entropy",
+   "band": ">=500",
+   "test_images": 3291,
+   "species": 13,
+   "accuracy_base": 0.7745366150106351,
+   "accuracy_fused": 0.7836523852932239,
+   "difference": 0.009115770282588809,
+   "difference_ci": [
+    -0.0006151444930521194,
+    0.0190311265650761
+   ],
+   "only_fused_correct": 114,
+   "only_base_correct": 84,
+   "clustered_mcnemar_p": 0.07095149242730561
+  },
+  {
+   "system": "ConvNeXt-V2 384, cross-entropy",
+   "band": "100-499",
+   "test_images": 1511,
+   "species": 23,
+   "accuracy_base": 0.6598279285241562,
+   "accuracy_fused": 0.6902713434811383,
+   "difference": 0.030443414956982107,
+   "difference_ci": [
+    0.014811577311577334,
+    0.04749047786655304
+   ],
+   "only_fused_correct": 85,
+   "only_base_correct": 39,
+   "clustered_mcnemar_p": 0.0002762397239473395
+  },
+  {
+   "system": "ConvNeXt-V2 384, cross-entropy",
+   "band": "20-99",
+   "test_images": 349,
+   "species": 30,
+   "accuracy_base": 0.4871060171919771,
+   "accuracy_fused": 0.5730659025787965,
+   "difference": 0.08595988538681942,
+   "difference_ci": [
+    0.04668263718263718,
+    0.12903774412990995
+   ],
+   "only_fused_correct": 34,
+   "only_base_correct": 4,
+   "clustered_mcnemar_p": 0.00013896465019368713
+  },
+  {
+   "system": "ConvNeXt-V2 384, cross-entropy",
+   "band": "<20",
+   "test_images": 116,
+   "species": 40,
+   "accuracy_base": 0.1206896551724138,
+   "accuracy_fused": 0.22413793103448276,
+   "difference": 0.10344827586206896,
+   "difference_ci": [
+    0.02857142857142858,
+    0.19092359767891676
+   ],
+   "only_fused_correct": 15,
+   "only_base_correct": 3,
+   "clustered_mcnemar_p": 0.010515245935858921
+  },
+  {
+   "system": "ConvNeXt-V2 384, Seesaw",
+   "band": ">=500",
+   "test_images": 3291,
+   "species": 13,
+   "accuracy_base": 0.7398966879367973,
+   "accuracy_fused": 0.7669401397751443,
+   "difference": 0.027043451838347,
+   "difference_ci": [
+    0.016488049800821046,
+    0.037519317703766375
+   ],
+   "only_fused_correct": 165,
+   "only_base_correct": 76,
+   "clustered_mcnemar_p": 6.782309937306338e-07
+  },
+  {
+   "system": "ConvNeXt-V2 384, Seesaw",
+   "band": "100-499",
+   "test_images": 1511,
+   "species": 23,
+   "accuracy_base": 0.6737260092653872,
+   "accuracy_fused": 0.6962276637988087,
+   "difference": 0.022501654533421567,
+   "difference_ci": [
+    0.009306364407254871,
+    0.03647781115993437
+   ],
+   "only_fused_correct": 72,
+   "only_base_correct": 38,
+   "clustered_mcnemar_p": 0.0015949936169505198
+  },
+  {
+   "system": "ConvNeXt-V2 384, Seesaw",
+   "band": "20-99",
+   "test_images": 349,
+   "species": 30,
+   "accuracy_base": 0.5214899713467048,
+   "accuracy_fused": 0.6045845272206304,
+   "difference": 0.08309455587392556,
+   "difference_ci": [
+    0.038779376284514305,
+    0.12766357382818744
+   ],
+   "only_fused_correct": 37,
+   "only_base_correct": 8,
+   "clustered_mcnemar_p": 0.0008121171348941297
+  },
+  {
+   "system": "ConvNeXt-V2 384, Seesaw",
+   "band": "<20",
+   "test_images": 116,
+   "species": 40,
+   "accuracy_base": 0.21551724137931033,
+   "accuracy_fused": 0.3879310344827586,
+   "difference": 0.1724137931034483,
+   "difference_ci": [
+    0.06666666666666671,
+    0.28245715108742614
+   ],
+   "only_fused_correct": 24,
+   "only_base_correct": 4,
+   "clustered_mcnemar_p": 0.005545667315244061
+  }
+ ]
+}

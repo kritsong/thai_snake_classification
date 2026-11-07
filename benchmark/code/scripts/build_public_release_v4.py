@@ -49,7 +49,8 @@ CODE = [
     "scripts/species_overlap_external_sources.py", "scripts/plot_frequency_bands_v4.py", "scripts/plot_confusions_v4.py",
     "scripts/generate_gradcam_v4.py", "scripts/compose_gradcam_figure_v4.py", "scripts/sample_predictions_v4.py",
     "scripts/locate_sample_images_v4.py", "scripts/count_macs_v4.py", "scripts/benchmark_full_species_v4.py",
-    "scripts/benchmark_selected_six.py", "scripts/exif_orientation_audit_v4.py", "scripts/build_public_release_v4.py",
+    "scripts/benchmark_selected_six.py", "scripts/exif_orientation_audit_v4.py", "scripts/venom_alert_and_tail_fusion_v4.py",
+    "scripts/build_public_release_v4.py",
     "scripts/run_taxonomy_revision_queue.sh", "scripts/run_taxonomy_revision_resume.sh",
     "scripts/run_taxonomy_revision_grids.sh", "scripts/run_taxonomy_revision_preliminary.sh",
 ]
