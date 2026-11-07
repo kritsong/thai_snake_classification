@@ -20,10 +20,10 @@ Trained checkpoints: <https://huggingface.co/kritaphatson/thai_snake_image_class
 | `data/external_scope.jsonl` | The 368 SnakeCLEF Thailand validation images (201 observations, 82 species) used for external validation |
 | `predictions/reported/` | The nine architectures at 224 px and ConvNeXt-V2-Base at 384 px (cross-entropy and Seesaw): CV summary, per-fold metrics, out-of-fold development predictions, locked-test predictions, protocol |
 | `predictions/seed_repeats/` | Test predictions of the two additional training seeds of the five most accurate systems |
-| `predictions/bioclip2_zero_shot_and_probe/` | BioCLIP 2 without training on benchmark images (zero-shot), with its class texts, and the frozen-feature probe |
+| `predictions/bioclip2_zero_shot_and_probe/` | BioCLIP 2 without training on benchmark images (zero-shot): class texts, development and test predictions; and the frozen-feature probe |
 | `predictions/external_snakeclef/` | Observation-level external predictions and scores |
 | `predictions/preliminary/` | The two lighter recipes, the learning-rate ablation and the feature probes (Appendix A): metrics, protocols and test predictions. Their out-of-fold development predictions are on Hugging Face (`benchmark_v4/predictions_preliminary_oof/`) |
-| `analysis/` | The tables behind the paper: `benchmark_systems.csv` (Table 5), `benchmark_seed_repeats.csv` (Table 6), `benchmark_frequency_bands.csv` (Table 7), `benchmark_venom_confusions.csv` (Table 8), `benchmark_external_systems.csv` (Table 9), paired tests, poster-overlap sensitivity, group-weighted accuracy, confusions |
+| `analysis/` | The tables behind the paper: `benchmark_systems.csv` (Table 5), `benchmark_seed_repeats.csv` (Table 6), `benchmark_frequency_bands.csv` (Table 7), `benchmark_venom_confusions.csv` (Table 8), `venom_alert.csv` (Table 9) with the full threshold curve `venom_alert_curve.csv`, `benchmark_external_systems.csv` (Table 10), `tail_fusion.csv` and `tail_fusion_bands.csv` (zero-shot fusion, Section 3.5 and the fused rows of Table 7), `post_hoc_decisions.json` (alert thresholds and fusion weights chosen on development predictions), paired tests, poster-overlap sensitivity, group-weighted accuracy, confusions |
 | `code/` | Dataset building, training, evaluation and analysis scripts |
 | `checksums.json` | SHA-256 of every file |
 
@@ -44,6 +44,17 @@ the source spreadsheet. The SHA-256 content hashes allow anyone who holds an ima
 import pandas as pd
 p = pd.read_csv("predictions/reported/convnextv2_base_384_ce/test_predictions.csv.gz")
 print((p.predicted_label == p.class_label).mean())  # 0.708, Table 5
+```
+
+Fusion with the zero-shot predictions (weight 0.6, chosen on development predictions):
+
+```python
+import numpy as np
+cols = [f"probability_{i:03d}" for i in range(139)]
+z = pd.read_csv("predictions/bioclip2_zero_shot_and_probe/zero_shot_test_predictions.csv.gz")
+z = z.set_index("relative_path").loc[p.relative_path]
+logp = np.log(p[cols].clip(lower=1e-12).to_numpy()) + 0.6 * np.log(z[cols].clip(lower=1e-12).to_numpy())
+print((logp.argmax(1) == p.label_id).mean())  # 0.731, Section 3.5
 ```
 
 ## Licence
