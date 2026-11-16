@@ -156,7 +156,7 @@ def main() -> None:
             f"{img_cnt} ({grp_cnt}g)", va="center", ha="left", fontsize=6.8, color=INK,
         )
 
-    # Plot Panel (c) bottom: Venomous -> harmless (MIVS -> non-MIVS) confusions
+    # Plot Panel (c) bottom: MIVS -> non-MIVS confusions
     y_v2h = np.arange(len(top_v2h))
     bars_v2h = ax_v2h.barh(y_v2h, top_v2h.images, height=0.68, color=CORAL, edgecolor="white", zorder=3)
     labels_v2h = [
@@ -169,7 +169,7 @@ def main() -> None:
     ax_v2h.grid(axis="x", color=GRID, linewidth=0.6, zorder=0)
     ax_v2h.spines[["top", "right"]].set_visible(False)
     ax_v2h.set_xlabel("Test images (independent groups in parentheses)", fontsize=7.8, color=INK)
-    ax_v2h.set_title("(c) Most frequent venomous-to-harmless (MIVS → non-MIVS) errors", loc="left", fontsize=9.0, color=INK, pad=6)
+    ax_v2h.set_title("(c) Most frequent MIVS-to-non-MIVS errors", loc="left", fontsize=9.0, color=INK, pad=6)
     for bar, img_cnt, grp_cnt in zip(bars_v2h, top_v2h.images, top_v2h.groups):
         ax_v2h.text(
             bar.get_width() + 0.45, bar.get_y() + bar.get_height() / 2,
