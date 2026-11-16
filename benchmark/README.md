@@ -8,6 +8,11 @@ every model reported in the paper.
 
 Trained checkpoints: <https://huggingface.co/kritaphatson/thai_snake_image_classifier> (folder `benchmark_v4/`).
 
+Frozen image embeddings: BioCLIP 2, DINOv2 and CLIP ViT-L/14 vectors of all 26,368 images, with the split, folds
+and an example classifier, are in the same repository (folder
+[`benchmark_v4/embeddings/`](https://huggingface.co/kritaphatson/thai_snake_image_classifier/tree/main/benchmark_v4/embeddings),
+CC BY-NC 4.0). With them, new classifiers can be trained and scored on the benchmark without the photographs.
+
 ## Contents
 
 | Folder | What it holds |
@@ -23,7 +28,7 @@ Trained checkpoints: <https://huggingface.co/kritaphatson/thai_snake_image_class
 | `predictions/bioclip2_zero_shot_and_probe/` | BioCLIP 2 without training on benchmark images (zero-shot): class texts, development and test predictions; and the frozen-feature probe |
 | `predictions/external_snakeclef/` | Observation-level external predictions and scores |
 | `predictions/preliminary/` | The two lighter recipes, the learning-rate ablation and the feature probes (Appendix A): metrics, protocols and test predictions. Their out-of-fold development predictions are on Hugging Face (`benchmark_v4/predictions_preliminary_oof/`) |
-| `analysis/` | The tables behind the paper: `benchmark_systems.csv` (Table 5), `benchmark_seed_repeats.csv` (Table 6), `benchmark_frequency_bands.csv` (Table 7), `benchmark_venom_confusions.csv` (Table 8), `venom_alert.csv` (Table 9) with the full threshold curve `venom_alert_curve.csv`, `benchmark_external_systems.csv` (Table 10), `tail_fusion.csv` and `tail_fusion_bands.csv` (zero-shot fusion, Section 3.5 and the fused rows of Table 7), `post_hoc_decisions.json` (alert thresholds and fusion weights chosen on development predictions), paired tests, poster-overlap sensitivity, group-weighted accuracy, confusions |
+| `analysis/` | The tables behind the paper: `benchmark_systems.csv` (Table 5), `benchmark_seed_repeats.csv` (Table 6), `benchmark_frequency_bands.csv` (Table 7), `benchmark_venom_confusions.csv` (Table 8), `venom_alert.csv` (Table 9) with the full threshold curve `venom_alert_curve.csv`, `benchmark_external_systems.csv` (Table 10), `tail_fusion.csv` and `tail_fusion_bands.csv` (zero-shot fusion, Section 3.5 and the fused rows of Table 7), `post_hoc_decisions.json` (alert thresholds and fusion weights chosen on development predictions), `venom_alert_dangerous.csv` and `venom_alert_all_venomous.csv` (Section 3.7: alerts on the 16 dangerously venomous species outside the MIVS list, and the alert summed over all 38 dangerously venomous species), `fusion_by_source.csv` (Section 3.5: fusion on still photographs and video frames), `report_level_accuracy.csv` (Section 3.2: probabilities averaged per report), paired tests, poster-overlap sensitivity, group-weighted accuracy, confusions |
 | `code/` | Dataset building, training, evaluation and analysis scripts |
 | `checksums.json` | SHA-256 of every file |
 
