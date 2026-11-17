@@ -27,8 +27,8 @@ CC BY-NC 4.0). With them, new classifiers can be trained and scored on the bench
 | `predictions/seed_repeats/` | Test predictions of the two additional training seeds of the five most accurate systems |
 | `predictions/bioclip2_zero_shot_and_probe/` | BioCLIP 2 without training on benchmark images (zero-shot): class texts, development and test predictions; and the frozen-feature probe |
 | `predictions/external_snakeclef/` | Observation-level external predictions and scores |
-| `predictions/preliminary/` | The two lighter recipes, the learning-rate ablation and the feature probes (Appendix A): metrics, protocols and test predictions. Their out-of-fold development predictions are on Hugging Face (`benchmark_v4/predictions_preliminary_oof/`) |
-| `analysis/` | The tables behind the paper: `benchmark_systems.csv` (Table 5), `benchmark_seed_repeats.csv` (Table 6), `benchmark_frequency_bands.csv` (Table 7), `benchmark_venom_confusions.csv` (Table 8), `venom_alert.csv` (Table 9) with the full threshold curve `venom_alert_curve.csv`, `benchmark_external_systems.csv` (Table 10), `tail_fusion.csv` and `tail_fusion_bands.csv` (zero-shot fusion, Section 3.5 and the fused rows of Table 7), `post_hoc_decisions.json` (alert thresholds and fusion weights chosen on development predictions), `venom_alert_dangerous.csv` and `venom_alert_all_venomous.csv` (Section 3.7: alerts on the 16 dangerously venomous species outside the MIVS list, and the alert summed over all 38 dangerously venomous species), `fusion_by_source.csv` (Section 3.5: fusion on still photographs and video frames), `report_level_accuracy.csv` (Section 3.2: probabilities averaged per report), paired tests, poster-overlap sensitivity, group-weighted accuracy, confusions |
+| `predictions/preliminary/` | Exploratory runs scored on the test set before the reported protocol was adopted (two lighter recipes, a learning-rate ablation and frozen-feature probes), as the paper's Limitations state: metrics, protocols and test predictions. Their out-of-fold development predictions are on Hugging Face (`benchmark_v4/predictions_preliminary_oof/`) |
+| `analysis/` | The tables behind the paper: `benchmark_systems.csv` (Table 6), `top5_accuracy.csv` (top-5 accuracy in Tables 6, 9 and 13), `benchmark_seed_repeats.csv` (Table 7), `benchmark_frequency_bands.csv` (Table 8), `tail_fusion.csv`, `tail_fusion_bands.csv`, `fusion_by_source.csv` and `report_level_accuracy.csv` (zero-shot fusion, Section 3.4 and Table 9, and the fused rows of Table 8), `benchmark_poster_overlap_sensitivity.csv` (Table 10), `benchmark_venom_confusions.csv` (Table 11), `venom_alert.csv` (Table 12) with the full threshold curve `venom_alert_curve.csv`, `benchmark_external_systems.csv` (Table 13), `post_hoc_decisions.json` (alert thresholds and fusion weights chosen on development predictions), `venom_alert_dangerous.csv` and `venom_alert_all_venomous.csv` (Section 3.6: alerts on the 16 dangerously venomous species outside the MIVS list, and the alert summed over all 38 dangerously venomous species), paired tests, group-weighted accuracy, confusions |
 | `code/` | Dataset building, training, evaluation and analysis scripts |
 | `checksums.json` | SHA-256 of every file |
 
@@ -48,7 +48,7 @@ the source spreadsheet. The SHA-256 content hashes allow anyone who holds an ima
 ```python
 import pandas as pd
 p = pd.read_csv("predictions/reported/convnextv2_base_384_ce/test_predictions.csv.gz")
-print((p.predicted_label == p.class_label).mean())  # 0.708, Table 5
+print((p.predicted_label == p.class_label).mean())  # 0.708, Table 6
 ```
 
 Fusion with the zero-shot predictions (weight 0.6, chosen on development predictions):
@@ -59,7 +59,14 @@ cols = [f"probability_{i:03d}" for i in range(139)]
 z = pd.read_csv("predictions/bioclip2_zero_shot_and_probe/zero_shot_test_predictions.csv.gz")
 z = z.set_index("relative_path").loc[p.relative_path]
 logp = np.log(p[cols].clip(lower=1e-12).to_numpy()) + 0.6 * np.log(z[cols].clip(lower=1e-12).to_numpy())
-print((logp.argmax(1) == p.label_id).mean())  # 0.731, Section 3.5
+print((logp.argmax(1) == p.label_id).mean())  # 0.731, Table 9
+```
+
+Top-5 accuracy (the true species among the five highest probabilities):
+
+```python
+top5 = np.argsort(-p[cols].to_numpy(), axis=1)[:, :5]
+print((top5 == p.label_id.to_numpy()[:, None]).any(1).mean())  # 0.908, Table 6
 ```
 
 ## Licence
