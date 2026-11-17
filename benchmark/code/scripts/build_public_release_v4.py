@@ -51,6 +51,7 @@ CODE = [
     "scripts/locate_sample_images_v4.py", "scripts/count_macs_v4.py", "scripts/benchmark_full_species_v4.py",
     "scripts/benchmark_selected_six.py", "scripts/exif_orientation_audit_v4.py", "scripts/venom_alert_and_tail_fusion_v4.py",
     "scripts/weak_point_checks_v4.py", "scripts/build_embeddings_release_v4.py", "scripts/build_public_release_v4.py",
+    "scripts/top5_accuracy_v4.py", "scripts/paper_tables_e30_v4.py",
     "scripts/run_taxonomy_revision_queue.sh", "scripts/run_taxonomy_revision_resume.sh",
     "scripts/run_taxonomy_revision_grids.sh", "scripts/run_taxonomy_revision_preliminary.sh",
 ]
