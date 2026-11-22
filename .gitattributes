@@ -1,0 +1,2 @@
+# Store the benchmark release byte for byte, so files match benchmark/checksums.json
+benchmark/** -text
