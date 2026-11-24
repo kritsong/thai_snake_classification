@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Resume of the taxonomy-revision queues after both were stopped on 22 Oct 2026 (~08:16 UTC) when the
-# Claude Code session that launched them exited. Only the unfinished steps are run; finished CV folds
+# terminal session that launched them exited. Only the unfinished steps are run; finished CV folds
 # are verified and skipped by the runners.
 #   lane a: BioCLIP 2 locked-test refit (its CV is complete), then the seed repeats of BioCLIP 2 and of
 #           the two 384-px ConvNeXt-V2 models; writes "LANE a COMPLETE" to lane_a.log as before.
